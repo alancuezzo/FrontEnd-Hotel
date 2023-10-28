@@ -1,32 +1,34 @@
 import React from "react";
 import "../css/footer.css";
 import Logo from "../assets/GOLDEN_LOGO.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 return (
     <>
-        <div className="bg-dark">
-            <div className="container">
-                <div className="row d-flex flex-column flex-md-row gap-5 py-5">
-                    <div className="col d-flex justify-content-center">
-                        <img className="footer-logo" src={Logo} alt="logo" />
-                    </div>
-                    <div className="col d-flex justify-content-center align-items-center text-white gap-5">
-                        <i className="fa fa-facebook fa-2x" aria-hidden="true"></i>
-                        <i className="fa fa-twitter fa-2x" aria-hidden="true"></i>
-                        <i className="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
-                    </div>
-                    <div className="col text-white d-flex justify-content-center align-items-center flex-column">
-                        <p>Empresa</p>
-                        <p>Comunidades</p>
-                        <span><i className="fa fa-whatsapp" aria-hidden="true"></i>{" "}</span>
-                        <p>Contacto</p>
-                    </div>
-                    <div className="col-12 text-center text-white">
-                        <span>Hecho con 🤍 &copy; RollingCode School</span>
-                    </div>
+        <div className="pie-pagina">
+        <div className="grupo-1">
+            <div className="box">
+            <img className="footer-logo" src={Logo} alt="logo" />
+          </div>
+            <div className="box">
+                <h2>CONTACTÁNOS</h2>
+                <p>lalalala</p>
+                <p>+lalalalalal</p>
+            </div>
+            <div className="box">
+                <h2>SEGUINOS EN NUESTRAS REDES!</h2>
+                <div className="red-social">
+                    <Link to="https://www.facebook.com/" className="fa fa-facebook"></Link>
+                    <Link to="https://www.instagram.com/" className="fa fa-instagram"></Link>
+                    <Link to="https://twitter.com/?lang=es" className="fa fa-twitter"></Link>
+                    <Link to="https://www.youtube.com/" className="fa fa-youtube"></Link>
                 </div>
             </div>
+        </div>
+        <div className="grupo-2">
+            <small>&copy; 2023 <b>Golden Palace</b> - Todos los Derechos Reservados.</small>
+        </div>
         </div>
     </>
 )
