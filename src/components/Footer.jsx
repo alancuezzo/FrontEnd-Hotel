@@ -9,7 +9,7 @@ return (
             <div className="container">
                 <div className="row d-flex flex-column flex-md-row gap-5 py-5">
                     <div className="col d-flex justify-content-center">
-                        <img className="footer-logo" src={logo} alt="logo" />
+                        <img className="footer-logo" src={Logo} alt="logo" />
                     </div>
                     <div className="col d-flex justify-content-center align-items-center text-white gap-5">
                         <i className="fa fa-facebook fa-2x" aria-hidden="true"></i>
