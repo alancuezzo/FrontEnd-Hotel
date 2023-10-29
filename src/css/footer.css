@@ -76,6 +76,7 @@
     color: #000000;
 }
 .pie-pagina .grupo-2{
+    width: 100vw;
     background-color: #000000;
     padding: 1px;
     text-align: center;
@@ -84,4 +85,24 @@
 .pie-pagina .grupo-2 small{
     font-size: 13px;
     letter-spacing: 2px;
+}
+
+@media screen and (max-width:768px){
+
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
+@media screen and (max-width:390px){
+
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
 }
