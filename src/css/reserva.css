@@ -1,0 +1,155 @@
+*{
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif;
+}
+:root {
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+
+
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  
+    
+  }
+
+  .borde{
+    border: solid 1px #ffffff3b;
+    padding: 10px;
+    padding-left: 25px;
+    height: 680px;
+    width: 400px;
+    
+  }
+
+  .texto {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    left: -15px;
+    
+  }
+  .formcompleto{
+   display: flex;
+   
+  }
+  .calendar{
+    display: flex;
+  }
+  
+  .formu{
+   display: flex;
+   justify-content: center;
+   width: 90%;
+   margin-bottom: 10px;
+    
+   
+  }
+  .formul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+   
+     
+    
+   }
+
+  .formu .formu1 {
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+    font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif;
+    font-size: 16px;
+  }
+
+  .formu .formu2{
+    margin-bottom: 10px; }
+
+  Col.calendar {
+   width: 100px;
+   
+   
+}
+
+.goldenimg1{
+width: 70%;
+position: relative;
+left: 50px;
+}
+
+h4 {
+margin-top: 5px;
+margin-bottom: 0%;
+}
+
+.cal{
+  margin: 0%;
+  padding: 2%;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.personas{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.catego{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+  
+}
+
+.boton{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25%;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid #ffff;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  padding-bottom: 5px;
+}
+.button:hover {
+  border-color: goldenrod;
+  background-color: goldenrod;
+}
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
