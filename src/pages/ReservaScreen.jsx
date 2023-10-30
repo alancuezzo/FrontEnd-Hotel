@@ -17,19 +17,6 @@ import Button from 'react-bootstrap/Button';
 
 
 
-
-// const categorias = [
-//   'Habitacion Simple',
-//   'Habitacion Doble',
-//   'Habitacion Suit',
-//   'Habitacion Suit de Lujo',
-//   'Habitacion Familiar',
-  
-// ];
-
-
-
-
 const ReservasScreen = () => {
 
   const [caterogia, setCaterogia] = React.useState('');
@@ -98,7 +85,7 @@ const ReservasScreen = () => {
 </div>
 
 <div className="catego">
-<Box  sx={{width: 250, mt:1,  color: "rgb(229,228,226)", }}>
+<Box  sx={{width: 250, mt:1 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Categorias</InputLabel>
         <Select
@@ -110,8 +97,11 @@ const ReservasScreen = () => {
         >
           <MenuItem value={10}>Habitacion Simple</MenuItem>
           <MenuItem value={20}>Habitacion Doble</MenuItem>
-          <MenuItem value={30}>Habitacion Familiar</MenuItem>
-          <MenuItem value={40}>Habitacion Suit</MenuItem>
+          <MenuItem value={30}>Habitacion Triple</MenuItem>
+          <MenuItem value={40}>Habitacion Familiar</MenuItem>
+          <MenuItem value={50}>Habitacion Suit</MenuItem>
+          <MenuItem value={60}>Habitacion Suit Presidencial</MenuItem>
+          <MenuItem value={70}>Habitacion Ejecutivas</MenuItem>
         </Select>
       </FormControl>
     </Box>
