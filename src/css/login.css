@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root {
+    color: #000000;
+    color: #2F2F2F;
+    color: #7C6F55;
+    color: #BDA871;
+    color: #C3B07E;
+    color: #CDBE95;
+    color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(https://img.freepik.com/free-photo/futuristic-subway-station-illuminated-modern-empty-motion-generated-by-ai_188544-37950.jpg?t=st=1698091481~exp=1698095081~hmac=82143270684513b9461b5530e5dc3ccf5ff41d67c74667ef1c796f00f38f9eb1&w=996);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 420px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    color: #ffff;
+    border: 1px solid #ffffff33;
+    border-radius: 10px;
+    padding: 30px 40px;
+
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+    margin: 30px 0;
+}
+
+.wrapper input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffff;
+    padding: 20px 45px 20px 20px;
+}
+
+.wrapper input::placeholder {
+    color: #ffff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    width: 12px;
+    accent-color: #ffff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #ffff;
+    text-decoration: none;
+
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    color: #CDBE95;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #ffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .btn:hover {
+    background: goldenrod;
+    font-weight: bolder;
+    color: #ffff;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link p a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.resultado {
+    text-align: center;
+}
