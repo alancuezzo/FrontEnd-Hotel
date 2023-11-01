@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { crearReserva } from "../helpers/ReservaApi";
 import "../css/reserva.css";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -13,17 +15,63 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from 'react-bootstrap/Button';
+import MessageApp from "../components/MessageApp";
 
 
 
 
-const ReservasScreen = () => {
+const ReservasScreen = (Reservacion, guardarReserva) => {
 
-  const [caterogia, setCaterogia] = React.useState('');
+  const navigate = useNavigate();
 
-  const handleChange = (event) => {
-    setCaterogia(event.target.value);
+  const [inputNombre, setInputNombre] = useState("");
+  const [inputUsuario, setInputUsuario] = useState("");
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+
+ const [caterogia, setCaterogia] = React.useState('');
+
+ const [resultado, setResultado] = useState(null);
+ const [loading, setLoading] = useState(false);
+
+ const handleReservas = async (e) => {
+  e.preventDefault();
+  //ejecutar setLoading
+  setLoading(true);
+
+  const datos = {
+    correo: inputNombre,
+    usuario: inputUsuario,
+    entrada: startDate,
+    salida: endDate,
+
+
   };
+
+  const resp = await crearReserva(datos);
+    console.log(resp);
+
+  
+
+  if (resp?.token) {
+   
+    localStorage.setItem("token", JSON.stringify(resp.token));
+    
+    Reservacion();
+
+    guardarReserva(resp.reserva);
+
+    navigate("/");
+  }
+
+  setResultado(resp);
+
+  setLoading(false);
+};
+
+const handleChange = (event) => {
+  setCaterogia(event.target.value);
+};
 
   return (
     <>
@@ -41,14 +89,14 @@ const ReservasScreen = () => {
       </div>
       </div>
 
-      <Form className='formcompleto'>
+      <Form onSubmit={handleReservas} className='formcompleto'>
       <Row>
         <div className='formul'>
         <Col className='formu'>
-        <Form.Control className='formu1'  type="text" placeholder="Full Name" />
+        <Form.Control value={inputNombre} onChange={(e) => setInputNombre(e.target.value)} className='formu1'  type="text" placeholder="Full Name" />
         </Col>
         <Col className='formu '>
-        <Form.Control className='formu1'  type="text" placeholder="Username" />
+        <Form.Control value={inputUsuario} onChange={(e) => setInputUsuario(e.target.value)} className='formu1'  type="text" placeholder="Username" />
         </Col>
         </div>
        
@@ -58,14 +106,14 @@ const ReservasScreen = () => {
         <Col className='calendar'>
           <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
           <h4 className='ensal'>Entrada</h4>
-      <DatePicker className='datepicker' />
+      <DatePicker selected={startDate} onChange={date => setStartDate(date)} className='datepicker' />
     </LocalizationProvider>
     </div>
     
     
     <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
           <h4 className='ensal'>Salida</h4>
-      <DatePicker className='datepicker' />
+      <DatePicker selected={endDate} onChange={date => setEndDate(date)} className='datepicker' />
     </LocalizationProvider>
     </div>
        
@@ -77,6 +125,8 @@ const ReservasScreen = () => {
           id="standard-number"
           label="Number of people"
           type="number"
+          min="1"
+          max="10"
           InputLabelProps={{
             shrink: true,
           }}
@@ -106,16 +156,19 @@ const ReservasScreen = () => {
       </FormControl>
     </Box>
 </div>
-   
 
 
         
       </Row>
     </Form>
     <div className="boton">
-       <Button className='button' as="input" type="submit" value="Submit" />{' '}
+       <Button onClick={handleReservas} disabled={loading && true}  className='button' as="input" type="submit" value="Reservar" />
     </div>
-   
+    {resultado?.msg && (
+              <div className="mt-2">
+                <MessageApp mensaje={resultado.msg} />
+              </div>
+            )}
     </div>
    
   </>
