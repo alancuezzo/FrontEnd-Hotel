@@ -16,12 +16,39 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from 'react-bootstrap/Button';
 import MessageApp from "../components/MessageApp";
+import { styled } from '@mui/material/styles';
+
+
+
+
+const CssTextField = styled(TextField,Select)({
+  '& label.Mui-focused': {
+    color: '#ffff',
+  },
+  '& .MuiInput-underline:after': {
+    borderBottomColor: '#ffff',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: '#ffff',
+      
+    },
+    '&:hover fieldset': {
+      borderColor: '#ffff',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#ffff',
+      
+    },
+  },
+});
+
 
 
 
 
 const ReservasScreen = (Reservacion, guardarReserva) => {
-
+  
   const navigate = useNavigate();
 
   const [inputNombre, setInputNombre] = useState("");
@@ -93,10 +120,10 @@ const handleChange = (event) => {
       <Row>
         <div className='formul'>
         <Col className='formu'>
-        <Form.Control value={inputNombre} onChange={(e) => setInputNombre(e.target.value)} className='formu1'  type="text" placeholder="Full Name" />
+        <Form.Control  value={inputNombre} onChange={(e) => setInputNombre(e.target.value)} className='formu1'  type="text" placeholder="Full Name" />
         </Col>
         <Col className='formu '>
-        <Form.Control value={inputUsuario} onChange={(e) => setInputUsuario(e.target.value)} className='formu1'  type="text" placeholder="Username" />
+        <Form.Control  value={inputUsuario} onChange={(e) => setInputUsuario(e.target.value)} className='formu1'  type="text" placeholder="Username" />
         </Col>
         </div>
        
@@ -106,12 +133,17 @@ const handleChange = (event) => {
         <Col className='calendar'>
           <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
           <h4 className='ensal'>Entrada</h4>
-      <DatePicker selected={startDate} onChange={date => setStartDate(date)} className='datepicker' />
+      <DatePicker  selected={startDate} onChange={date => setStartDate(date)} className='datepicker'  renderInput={({ inputRef, inputProps, InputProps }) => (
+      <Box sx={{ borderColor:'warning' }}>
+        <input ref={inputRef} {...inputProps} />
+        {InputProps?.endAdornment}
+      </Box>
+    )} />
     </LocalizationProvider>
     </div>
     
     
-    <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
+    <div className="cal"> <LocalizationProvider className='datepicker'  label="Responsive variant" dateAdapter={AdapterDayjs}>
           <h4 className='ensal'>Salida</h4>
       <DatePicker selected={endDate} onChange={date => setEndDate(date)} className='datepicker' />
     </LocalizationProvider>
@@ -120,13 +152,14 @@ const handleChange = (event) => {
     </Col>
    
     <div className="personas">
-<TextField
-          
-          id="standard-number"
+<CssTextField
+           sx={{
+            '& > :not(style)': { color:'white' },
+          }}
+          id="custom-css-outlined-input"
           label="Number of people"
           type="number"
-          min="1"
-          max="10"
+          required
           InputLabelProps={{
             shrink: true,
           }}
@@ -134,16 +167,21 @@ const handleChange = (event) => {
         />
 </div>
 
-<div className="catego">
-<Box  sx={{width: 250, mt:1 }}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Categorias</InputLabel>
-        <Select
+
+<div className="catego" >
+<Box  sx={{width: 250, mt:1, borderColor:'white' }}>
+      <FormControl fullWidth  sx={{
+        '& > :not(style)': { m: 1, width: '25ch', color:'white', borderColor:'white' },
+      }}>
+        <InputLabel id="demo-simple-select-label" color="warning">Categorias</InputLabel>
+        <Select 
+          color="warning"
           labelId="demo-simple-select-label"
-          id="demo-simple-select"
+          id="outlined-select-currency-native"
           value={caterogia}
           label="Categorias"
           onChange={handleChange}
+          required
         >
           <MenuItem value={10}>Habitacion Simple</MenuItem>
           <MenuItem value={20}>Habitacion Doble</MenuItem>
@@ -156,6 +194,8 @@ const handleChange = (event) => {
       </FormControl>
     </Box>
 </div>
+
+
 
 
         
