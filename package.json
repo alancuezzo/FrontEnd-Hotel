@@ -25,8 +25,14 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-router-dom": "^6.17.0",
     "styled-components": "^6.1.0"
+=======
+    "react-hook-form": "^7.47.0",
+    "react-router-dom": "^6.17.0",
+    "sweetalert2": "^11.9.0"
+>>>>>>> 44581a53fa617741c2ad65547478cdd0eb7f434a
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
