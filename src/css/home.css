@@ -13,6 +13,7 @@
     padding: 0;
     margin: 0;
     background-color: #000000;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 
 .fondovideo{
@@ -40,6 +41,10 @@ video {
     z-index: 3;
 }
 
-.cardsOfertas {
+.ofertas_titulo {
     color: #CDBE95;
+}
+
+.ofertas_cards{
+    height: 100vh;
 }
