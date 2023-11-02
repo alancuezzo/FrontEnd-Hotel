@@ -6,15 +6,15 @@
       "description" : "lalalalalala"
     },
     {
-        "id": 1,
-        "title": "Oferta 1",
-        "image": "https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/offers/global-offers/jumeirah-escapes/escapes-2023-global-offers-jcom_hero_imagejumeirah_dubai_couple-on-boat_3x2/jcom_hero_imagejumeirah_dubai_couple-on-boat__landscape.jpg",
+        "id": 2,
+        "title": "Oferta 2",
+        "image": "https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/offers/visa/jumeirah-maldives--miri--three-bedroom-beach-retreat--lady-walking-near-pool-4-crop.jpeg?h=1080&w=1920",
         "description" : "lalalalalala"
       },
       {
-        "id": 1,
-        "title": "Oferta 1",
-        "image": "https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/offers/global-offers/jumeirah-escapes/escapes-2023-global-offers-jcom_hero_imagejumeirah_dubai_couple-on-boat_3x2/jcom_hero_imagejumeirah_dubai_couple-on-boat__landscape.jpg",
+        "id": 3,
+        "title": "Oferta 3",
+        "image": "https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/offers/global-offers/jumeirah-flavours/flavours-2023-jcom_hero_imagejumeirah_dubai_people-having-fun-while-eating-food-2x3/flavours-jcom_hero_imagejumeirah_dubai_people-having-fun-while-eating-food__landscape.jpg",
         "description" : "lalalalalala"
       }
     ]

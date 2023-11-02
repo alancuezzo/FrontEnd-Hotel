@@ -1,0 +1,38 @@
+:root{
+    --black: #000000;
+    --grisJet: #2F2F2F;
+    --walnutBrown: #675C46;
+    --coyote: #7C6F55;
+    --golden: #BDA871;
+    --goldenEcru: #C3B07E;
+    --goldenClaro: #CDBE95;
+    --white: #FFFFFF;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 20px 1px #675c4671;
+    transition: all 0.7s linear;
+}
+
+.card-body{
+    padding: 2rem 0;
+}
+
+.card-text{
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.card-img-top{
+   transition: all 0.8s ease-in-out;
+}
+
+.card-img-top:hover{
+    transform: scale(1.8);
+}
+
+
