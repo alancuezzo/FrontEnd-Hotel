@@ -2,10 +2,9 @@ import './css/reserva.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReservaScreen from './pages/ReservaScreen';
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginSignUp from "./pages/LoginSignUp";
-// import ProtectedRoutes from "./routes/ProtectedRoutes"
-// import RoutesDos from "./routes/RoutesDos"
+import ProtectedRoutes from "./routes/ProtectedRoutes"
+import RoutesDos from "./routes/RoutesDos"
 import SignUp from "./components/SignUp"
 
 
