@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const MessageApp = ({ mensaje }) => {
   const [color, setColor] = useState("");
 
-  //cuando se monta el componente y cuando cambia el mensaje
   useEffect(() => {
     if (mensaje == "Login OK!") {
       setColor("bg-success");

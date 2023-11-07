@@ -97,7 +97,7 @@ const SignUp = () => {
           </div>
           <button type='sumbit' className="btn">Registrarme</button>
           <div className="register-link">
-            <p>Ya tienes una cuenta?  <Link to="#"> Login</Link></p>
+            <p>Ya tienes una cuenta?  <Link to="/login"> Login</Link></p>
           </div>
         </form>
       </div>

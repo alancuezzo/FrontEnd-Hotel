@@ -1,4 +1,4 @@
-const url = "https://backend-hotel-6fff.onrender.com/api/usuarios";
+const url = "https://backend-hotel-dev-xcnz.1.us-1.fl0.io/api/usuarios";
 
 export const authSignUp = async (usuario) => {
     try {
