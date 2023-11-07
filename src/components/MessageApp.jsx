@@ -5,7 +5,10 @@ const MessageApp = ({ mensaje }) => {
 
   //cuando se monta el componente y cuando cambia el mensaje
   useEffect(() => {
+<<<<<<< HEAD
    
+=======
+>>>>>>> 38942dbe4c6d1e6e445779992134bdc054847b02
     if (mensaje == "Login OK!") {
       setColor("bg-success");
     } else {

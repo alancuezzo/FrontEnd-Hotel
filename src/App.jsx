@@ -45,7 +45,7 @@ function App() {
           {/* <Route path="*" element={<ErrorScreen />} /> */}
 
           {/* Ruta login que recibe funcion iniciar sesion y guardar datos */}
-          <Route path='/reservas' element={<ReservaScreen/>} />
+          <Route path='/reservas' element={<ReservaScreen />} />
           <Route
             path="/login"
             element={

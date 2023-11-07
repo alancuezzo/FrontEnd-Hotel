@@ -25,8 +25,12 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-hook-form": "^7.47.0",
+=======
+>>>>>>> 38942dbe4c6d1e6e445779992134bdc054847b02
     "react-router-dom": "^6.17.0",
+    "styled-components": "^6.1.0",
     "sweetalert2": "^11.9.0"
   },
   "devDependencies": {
