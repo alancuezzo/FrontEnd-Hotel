@@ -133,12 +133,7 @@ const handleChange = (event) => {
         <Col className='calendar'>
           <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
           <h4 className='ensal'>Entrada</h4>
-      <DatePicker  selected={startDate} onChange={date => setStartDate(date)} className='datepicker'  renderInput={({ inputRef, inputProps, InputProps }) => (
-      <Box sx={{ borderColor:'warning' }}>
-        <input ref={inputRef} {...inputProps} />
-        {InputProps?.endAdornment}
-      </Box>
-    )} />
+      <DatePicker  selected={startDate} onChange={date => setStartDate(date)} className='datepicker'/>
     </LocalizationProvider>
     </div>
     
