@@ -2,7 +2,6 @@ import './css/reserva.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReservaScreen from './pages/ReservaScreen';
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginSignUp from "./pages/LoginSignUp";
 // import ProtectedRoutes from "./routes/ProtectedRoutes"
 // import RoutesDos from "./routes/RoutesDos"
@@ -46,7 +45,7 @@ function App() {
           {/* <Route path="*" element={<ErrorScreen />} /> */}
 
           {/* Ruta login que recibe funcion iniciar sesion y guardar datos */}
-          <Route path='/reservas' element={<ReservaScreen/>} />
+          <Route path='/reservas' element={<ReservaScreen />} />
           <Route
             path="/login"
             element={
