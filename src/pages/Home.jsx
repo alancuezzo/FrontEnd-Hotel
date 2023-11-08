@@ -44,6 +44,27 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="container premios">
+      <h3>PREMIOS</h3>
+      <div className="row text-white">
+        <div className="col-md-3 col-sm-6 text-center">
+          <img src="https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/awards/baa-2022/michelin.png?h=1080&w=1920" alt="Imagen 1" className="img-fluid small-image" />
+          <p>Guía Michelin Dubai 2022 </p>
+        </div>
+        <div className="col-md-3 col-sm-6 text-center">
+          <img src="https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/awards/baa-2022/forbes-black-bg.png?h=1080&w=1920" alt="Imagen 2" className="img-fluid small-image" />
+          <p>Guía de viajes Forbes 2022</p>
+        </div>
+        <div className="col-md-3 col-sm-6 text-center">
+          <img src="https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/awards/baa-2022/hotel--catering-black-bg.png?h=1080&w=1920" alt="Imagen 3" className="img-fluid small-image" />
+          <p>Líderes de Hospitalidad</p>
+        </div>
+        <div className="col-md-3 col-sm-6 text-center">
+          <img src="https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/awards/baa-2022/gault--millau-bg.png?h=1080&w=1920" alt="Imagen 4" className="img-fluid small-image" />
+          <p>Guía Gault&Millau EAU 2022</p>
+        </div>
+      </div>
+    </div>
     </>
   )
 }
