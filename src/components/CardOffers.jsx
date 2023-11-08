@@ -4,7 +4,7 @@ import "../css/cardsoffers.css";
 const CardOffers = ({card}) => {
     return (
         <>
-            <div className="card text-center bg-dark">
+            <div className="card bg-black">
                 <div className="overflow">
                     <img className="card-img-top" src={card.image}/>
                 </div>
@@ -12,10 +12,18 @@ const CardOffers = ({card}) => {
                     <h4 className="card-title text-light">
                         {card.title}
                     </h4>
-                    <p className="card-text text-secondary">
-                    {card.description}
+                    <p className="card_text">
+                        <ul>
+                            <li>{card.item1}</li>
+                            <li>{card.item2}</li>
+                            <li>{card.item3}</li>
+                        </ul>
                     </p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                </div>
+                <div className="card_boton">
+                    <button className="boton_reserva ">
+                        <a>RESERVAR AHORA</a>
+                    </button>
                 </div>
             </div>
         </>

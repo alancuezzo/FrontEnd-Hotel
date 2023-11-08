@@ -9,18 +9,24 @@
     --white: #FFFFFF;
 }
 
+.card{
+    text-align: center;
+    font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif; 
+    margin: 0 30px 40px 0;
+}
+
 .card:hover {
     box-shadow: 5px 10px 20px 1px #675c4671;
     transition: all 0.7s linear;
 }
-
-.card-body{
-    padding: 2rem 0;
+.card_text{
+    margin-left: -35px;
 }
 
-.card-text{
-    padding: 0.3rem 1rem;
-    font-size: 1rem;
+.card_text ul li{
+    color: #675C46;
+    font-size: 19px;
+    list-style: none;
 }
 
 .overflow{
@@ -28,11 +34,50 @@
 }
 
 .card-img-top{
-   transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 
 .card-img-top:hover{
-    transform: scale(1.8);
+    transform: scale(1.5);
 }
 
+.boton_reserva{
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+    color: #FFFFFF;
+    width: 200px;
+    height: 45px;
+    background: #7C6F55;
+    border: none;
+    outline: none;
+    cursor: pointer;
 
+}
+
+.boton_reserva:hover{
+    color:#CDBE95
+} 
+
+button:hover{
+    background-color: #675C46;
+}
+
+.boton_reserva a{
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 10px;
+    background: none;
+}
+
+.card_boton{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .card{
+        margin: 10px;
+    }
+    .card-body h4{
+        font-size: 18px;
+    }
+    
+}
