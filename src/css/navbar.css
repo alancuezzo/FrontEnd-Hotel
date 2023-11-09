@@ -139,12 +139,15 @@ li:hover ul.submenu{
     color: #C3B07E;
 }
 
-@media only screen and (max-width:768px){
-    .navbar2{
-        display: block;
-    }
+
+
+
+/* Estilos para la versión responsive */
+@media screen and (max-width: 768px) {
 
     .navbar1{
         display: none;
     }
+
+    .navbar2{display: block;}
 }
