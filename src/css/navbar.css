@@ -12,7 +12,10 @@
 *{
     margin: 0;
     padding: 0;
-    background: rgb(24, 16, 77);
+}
+
+.navbar2{
+    display: none;
 }
 
 img{
@@ -24,7 +27,7 @@ img{
     margin-left: 150px;
 }
 
-nav{
+.navbar1{
     height: 100vh;
     z-index: 9999;
 }
@@ -134,4 +137,14 @@ li:hover ul.submenu{
 
 .submenu a:hover{
     color: #C3B07E;
+}
+
+@media only screen and (max-width:768px){
+    .navbar2{
+        display: block;
+    }
+
+    .navbar1{
+        display: none;
+    }
 }
