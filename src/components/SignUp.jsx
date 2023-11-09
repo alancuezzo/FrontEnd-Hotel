@@ -1,9 +1,15 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import MessageApp from './MessageApp';
 import { authSignUp } from '../helpers/ApiSignUp';
+import Login from './Login';
 
 const SignUp = () => {
+
+  const [resultado, setResultado] = useState("");
+  const [loading, setLoading] = useState(false);
+
+
   const [values, setValues] = useState({
     nombre: "",
     correo: "",
@@ -23,16 +29,29 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
+
     const usuario = {
       nombre: values.nombre,
       correo: values.correo,
       password: values.password,
-      rol: "ADMIN_ROLE",
+      rol: "USER_ROLE",
       edad: values.edad,
     }
-    console.log(usuario);
+
     const resp = await authSignUp(usuario);
     console.log(resp);
+
+    setValues({
+      nombre: "",
+      correo: "",
+      password: "",
+      edad: "",
+    });
+
+    setResultado(JSON.parse(resp));
+    setLoading(false);
+
   }
   return (
     <>
@@ -49,11 +68,11 @@ const SignUp = () => {
               value={values.nombre}
               minLength={2}
               maxLength={30}
-
               required
             />
             <i className="fa-solid fa-user"></i>
           </div>
+
 
           <div className="input-box">
             <input type="email"
@@ -63,10 +82,11 @@ const SignUp = () => {
               onChange={handleChange}
               value={values.correo}
               maxLength={40}
-
+              required
             />
             <i className="fa-solid fa-envelope"></i>
           </div>
+
           <div className="input-box">
             <input type="password"
               placeholder='Contraseña'
@@ -76,30 +96,40 @@ const SignUp = () => {
               value={values.password}
               minLength="6"
               maxLength="20"
-
               required
             />
             <i className="fa-solid fa-lock"></i>
           </div>
+
           <div className="input-box">
             <input
-              type="number"
-              step={1}
-              min={18}
               max={100}
+              min={18}
+              type="number"
               placeholder='Edad'
+              id='SignUpEdad'
               name="edad"
               onChange={handleChange}
               value={values.edad}
+              step={1}
               required
             />
             <i className="fa-regular fa-calendar"></i>
           </div>
-          <button type='sumbit' className="btn">Registrarme</button>
+
+          <button type='sumbit' className="btn" disabled={loading && true}>Registrarme</button>
+
           <div className="register-link">
-            <p>Ya tienes una cuenta?  <Link to="/login"> Login</Link></p>
+            <p>Ya tienes una cuenta? <NavLink to="/login">Login</NavLink> </p>
           </div>
+          {resultado?.msg && (
+            <MessageApp mensaje={resultado.msg} />
+          )}
+          {resultado?.error && (
+            <MessageApp mensaje={resultado.error} />
+          )}
         </form>
+
       </div>
 
     </>

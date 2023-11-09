@@ -23,9 +23,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 102vh;
-    width: 100%;
-    background-image: url(https://img.freepik.com/free-photo/futuristic-subway-station-illuminated-modern-empty-motion-generated-by-ai_188544-37950.jpg?t=st=1698091481~exp=1698095081~hmac=82143270684513b9461b5530e5dc3ccf5ff41d67c74667ef1c796f00f38f9eb1&w=996);
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://media.istockphoto.com/id/1407392463/es/foto/gente-de-negocios-que-trabaja-en-una-sala-de-juntas-con-una-computadora-port%C3%A1til.jpg?s=612x612&w=0&k=20&c=73uVUTs-bFoMRFWcFmTqHLmvsdciDqOy73YyACIOGgE=);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -132,6 +132,7 @@ body {
 }
 
 .register-link p a {
+
     color: #ffff;
     text-decoration: none;
     font-weight: 600;
@@ -139,6 +140,13 @@ body {
 
 .register-link p a:hover {
     text-decoration: underline;
+}
+
+.register-link {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
 }
 
 .resultado {

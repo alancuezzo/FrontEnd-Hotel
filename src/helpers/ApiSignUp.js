@@ -1,4 +1,4 @@
-const url = "https://backend-hotel-dev-xcnz.1.us-1.fl0.io/api/usuarios";
+const url = "http://localhost:8080/api/usuarios";
 
 export const authSignUp = async (usuario) => {
     try {
