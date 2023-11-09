@@ -49,7 +49,7 @@ const SignUp = () => {
       edad: "",
     });
 
-    setResultado(JSON.parse(resp));
+    setResultado(resp);
     setLoading(false);
 
   }

@@ -1,9 +1,9 @@
-import './css/reserva.css'
+// import './css/reserva.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReservaScreen from './pages/ReservaScreen';
 import { useState } from "react";
-// import ProtectedRoutes from "./routes/ProtectedRoutes"
-// import RoutesDos from "./routes/RoutesDos"
+import ProtectedRoutes from "./routes/ProtectedRoutes"
+import RoutesDos from "./routes/RoutesDos"
 import SignUp from "./components/SignUp"
 import Login from './components/Login';
 
@@ -27,19 +27,20 @@ function App() {
 
   return (
     <>
-      {/* 
-      <Route
-        path="/*"
-        element={
-          <ProtectedRoutes login={login}>
-            <RoutesDos cerrarSesion={cerrarSesion} user={user} />
-          </ProtectedRoutes>
-        }
-      /> */}
+
       {/* <Route path="*" element={<ErrorScreen />} /> */}
       <BrowserRouter>
         <Routes>
 
+          <Route
+            path="/*"
+            element={
+              <ProtectedRoutes login={login}>
+                <RoutesDos cerrarSesion={cerrarSesion} user={user} />
+              </ProtectedRoutes>
+            }
+
+          />
           <Route path='/reservas' element={<ReservaScreen />} />
           <Route
             path="/login"

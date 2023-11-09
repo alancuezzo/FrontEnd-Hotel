@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { Link } from "react-router-dom";
 import { authLogin } from "../helpers/ApiLogin";
 import MessageApp from "../components/MessageApp";
 import "../css/login.css";
 import { NavLink } from "react-router-dom";
 
 
-
 const Login = ({ iniciarSesion, guardarUsuario }) => {
 
+  const Navigate = useNavigate();
 
   const [inputCorreo, setInputCorreo] = useState("");
   const [inputPassword, setInputPassword] = useState("");
@@ -45,10 +44,9 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
 
       setLoading(false);
 
-      navigate("/");
+      Navigate("/");
 
       setResultado(resp);
-      <MessageApp mensaje={resp} />
     }
 
 
@@ -85,9 +83,7 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
           </form>
 
           {resultado?.msg && (
-
             <MessageApp mensaje={resultado.msg} />
-
           )}
         </div>
       </div >
