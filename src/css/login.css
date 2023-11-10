@@ -17,23 +17,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+.container-fluid {
     margin: 0;
-    padding: 0;
     display: flex;
+    place-items: center;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-image: url(https://media.istockphoto.com/id/1407392463/es/foto/gente-de-negocios-que-trabaja-en-una-sala-de-juntas-con-una-computadora-port%C3%A1til.jpg?s=612x612&w=0&k=20&c=73uVUTs-bFoMRFWcFmTqHLmvsdciDqOy73YyACIOGgE=);
+    min-width: 320px;
+    min-height: 100vh;
+    background-image: url(https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/madinat-jumeirah/al-qasr-at-madinat-jumeirah/hero/jumeirah-al-qasr-entrance-aerial-drone_landscape.jpg?w=2080);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+  }
+
 
 .wrapper {
     width: 420px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.112);
     backdrop-filter: blur(10px);
     color: #ffff;
     border: 1px solid #ffffff33;
@@ -62,9 +63,10 @@ body {
     border: none;
     outline: none;
     border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
+    border-radius: 5px;
     font-size: 16px;
     padding: 20px 45px 20px 20px;
+    
 }
 
 .wrapper input::placeholder {
@@ -105,24 +107,29 @@ body {
     color: #CDBE95;
 }
 
-.wrapper .btn {
+.contenedor-boton{
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .btn {
+    width: 200px;
     height: 45px;
-    background-color: #ffff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    background: #000000a6;
+    border: solid 2px #7C6F55;
     cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    border-radius: 0%;
+    margin: 20px;
+    padding: 3%;
+    color: #FFFFFF;
 }
 
 .wrapper .btn:hover {
-    background: goldenrod;
-    font-weight: bolder;
-    color: #ffff;
+    background-color: #675C46;
 }
 
 .wrapper .register-link {

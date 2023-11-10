@@ -54,7 +54,7 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
   };
   return (
     <>
-      <div>
+      <div className="container-fluid">
         <div className="wrapper">
           <form onSubmit={handleLogin}>
             <h1>Login</h1>
@@ -76,7 +76,9 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
               <label><input type="checkbox" />Recordarme</label>
               <NavLink to="*">Restablecer Contraseña</NavLink>
             </div>
+            <div className="contenedor-boton">
             <button type='sumbit' className="btn" disabled={loading && true}>login</button>
+            </div>
             <div className="register-link">
               <p>No tienes una cuenta?</p><NavLink to="/SignUp"> Registrarme</NavLink>
             </div>
