@@ -2,10 +2,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReservaScreen from './pages/ReservaScreen';
 import { useState } from "react";
-<<<<<<< HEAD
-import LoginSignUp from "./pages/LoginSignUp";
-=======
->>>>>>> 86929bded6d3cd8d51c6b4349eee98b163b6eebf
 import ProtectedRoutes from "./routes/ProtectedRoutes"
 import RoutesDos from "./routes/RoutesDos"
 import SignUp from "./components/SignUp"

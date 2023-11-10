@@ -12,13 +12,13 @@ const CardOffers = ({card}) => {
                     <h4 className="card-title text-light">
                         {card.title}
                     </h4>
-                    <p className="card_text">
+                    <div className="card_text">
                         <ul>
                             <li>{card.item1}</li>
                             <li>{card.item2}</li>
                             <li>{card.item3}</li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
                 <div className="card_boton">
                     <button className="boton_reserva ">
