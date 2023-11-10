@@ -55,6 +55,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
   const [inputUsuario, setInputUsuario] = useState("");
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
+  const [personas, setPersonas] = useState("");
 
  const [caterogia, setCaterogia] = React.useState('');
 
@@ -63,17 +64,21 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
 
  const handleReservas = async (e) => {
   e.preventDefault();
+
   //ejecutar setLoading
   setLoading(true);
 
   const datos = {
-    correo: inputNombre,
+    nombre: inputNombre,
     usuario: inputUsuario,
     entrada: startDate,
     salida: endDate,
+    personas: personas,
 
 
   };
+
+ 
 
   const resp = await crearReserva(datos);
     console.log(resp);
@@ -151,6 +156,9 @@ const handleChange = (event) => {
            sx={{
             '& > :not(style)': { color:'white' },
           }}
+          value={personas}
+          name="personas"
+          onChange={(e)=>{setPersonas(e.target.value)}}
           id="custom-css-outlined-input"
           label="Number of people"
           type="number"
