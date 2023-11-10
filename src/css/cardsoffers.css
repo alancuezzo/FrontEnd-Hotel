@@ -1,0 +1,83 @@
+:root{
+    --black: #000000;
+    --grisJet: #2F2F2F;
+    --walnutBrown: #675C46;
+    --coyote: #7C6F55;
+    --golden: #BDA871;
+    --goldenEcru: #C3B07E;
+    --goldenClaro: #CDBE95;
+    --white: #FFFFFF;
+}
+
+.card{
+    text-align: center;
+    font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif; 
+    margin: 0 30px 40px 0;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 20px 1px #675c4671;
+    transition: all 0.7s linear;
+}
+.card_text{
+    margin-left: -35px;
+}
+
+.card_text ul li{
+    color: #675C46;
+    font-size: 19px;
+    list-style: none;
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.card-img-top{
+    transition: all 0.8s ease-in-out;
+}
+
+.card-img-top:hover{
+    transform: scale(1.5);
+}
+
+.boton_reserva{
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+    color: #FFFFFF;
+    width: 200px;
+    height: 45px;
+    background: #7C6F55;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.boton_reserva:hover{
+    color:#CDBE95
+} 
+
+button:hover{
+    background-color: #675C46;
+}
+
+.boton_reserva a{
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 10px;
+    background: none;
+}
+
+.card_boton{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .card{
+        margin: 10px;
+    }
+    .card-body h4{
+        font-size: 18px;
+    }
+    
+}

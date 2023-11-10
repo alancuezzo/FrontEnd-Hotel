@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/api/reservas";
+const url = "https://backend-hotel-dev-xcnz.1.us-1.fl0.io/api/reservas";
 const token = JSON.parse(localStorage.getItem("token"));
 
 

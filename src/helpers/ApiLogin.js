@@ -10,7 +10,7 @@ export const authLogin = async (datos) => {
       },
     });
 
-    //recibimos del backend
+
     const data = await resp.json();
 
     return data;

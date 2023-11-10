@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { authLogin } from "../helpers/ApiLogin";
 import MessageApp from "../components/MessageApp";
 import "../css/login.css";
+import { NavLink } from "react-router-dom";
 
 
+const Login = ({ iniciarSesion, guardarUsuario }) => {
 
-const Login = ({ iniciarSesion, guardarUsuario, registro }) => {
+  const Navigate = useNavigate();
 
-  // const navigate = useNavigate();
   const [inputCorreo, setInputCorreo] = useState("");
   const [inputPassword, setInputPassword] = useState("");
   const [resultado, setResultado] = useState(null);
@@ -32,13 +32,25 @@ const Login = ({ iniciarSesion, guardarUsuario, registro }) => {
     if (resp?.token) {
 
       localStorage.setItem("token", JSON.stringify(resp.token));
+
       iniciarSesion();
 
       guardarUsuario(resp.usuario);
-      // navigate("/");
+
+
+      setInputCorreo("");
+
+      setInputPassword("");
+
+      setLoading(false);
+
+      Navigate("/");
+
+      setResultado(resp);
     }
-    setResultado(resp);
-    setLoading(false);
+
+
+
   };
   return (
     <>
@@ -62,18 +74,16 @@ const Login = ({ iniciarSesion, guardarUsuario, registro }) => {
             </div>
             <div className="remember-forgot">
               <label><input type="checkbox" />Recordarme</label>
-              <link to="#">Restablecer Contraseña</link>
+              <NavLink to="*">Restablecer Contraseña</NavLink>
             </div>
             <button type='sumbit' className="btn" disabled={loading && true}>login</button>
             <div className="register-link">
-              <p>No tienes una cuenta?<link to="/SignUp"> Registrarme</link></p>
+              <p>No tienes una cuenta?</p><NavLink to="/SignUp"> Registrarme</NavLink>
             </div>
           </form>
 
           {resultado?.msg && (
-
             <MessageApp mensaje={resultado.msg} />
-
           )}
         </div>
       </div >
