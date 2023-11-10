@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/GOLDEN_LOGO.png";
 import "../css/navbar.css";
-import ToggleMenu from "./ToggleMenu";
+import ToggleMenu from "./ToggleMenu"
 
 const NavBar = () => {
     return (
@@ -51,10 +51,18 @@ const NavBar = () => {
                 </div>
             </div>
             <div className="navbar2">
-                <ToggleMenu/>
+                <div className="navbar-app">
+                    <div className="left-section">
+                        <ToggleMenu />
+                        <div className="logo">
+                            <img src={logo} alt="Logo del hotel" />
+                        </div>
+                    </div>
+                    <button className="boton_toggle">
+                        <Link>RESERVAR AHORA</Link>
+                    </button>
+                </div>          
             </div>
-
-
         </>
     )
 };

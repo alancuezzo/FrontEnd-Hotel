@@ -1,31 +1,45 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom"
-import "../css/togglemenu.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../css/togglemenu.css';
 
 const ToggleMenu = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    return (
-      <nav className={`navbar ${isOpen ? "active" : ""}`}>
-        <div className="logo">Tu Logo</div>
-        <button className="menu-button" onClick={toggleMenu}>
-          ☰
-        </button>
-        <ul className={`menu ${isOpen ? "active" : ""}`}>
-          <li><a href="#">Iniciar Sesión</a></li>
-          <li><a href="#">Registro</a></li>
-          <li><a href="#">Habitaciones</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Nosotros</a></li>
-        </ul>
-        <button className="boton_login">
-          <Link to="#">RESERVAR AHORA</Link>
-        </button>
-      </nav>
-    );
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
-  
+
+  return (
+    <div className="toggle-menu">
+      <button className="hamburger-button" onClick={toggleMenu}>
+        ☰
+      </button>
+      {isMenuOpen && (
+        <div className="menu">
+          <ul>
+            <li>
+              <Link to="/">INICIAR SESIÓN</Link>
+            </li>
+            <li>
+              <Link to="/">REGISTRO</Link>
+            </li>
+            <li>
+              <Link to="/">GALERIA</Link>
+            </li>
+            <li>
+              <Link to="/">HABITACIONES</Link>
+            </li>
+            <li>
+              <Link to="/">SERVICIOS</Link>
+            </li>
+            <li>
+              <Link to="/">NOSOTROS</Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ToggleMenu;
