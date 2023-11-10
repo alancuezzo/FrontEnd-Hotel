@@ -8,7 +8,8 @@ import CardsOffers from "../components/CardsOffers";
 const Home = () => {
   return (
     <>
-      <div className="fondovideo">
+<div className="contenedor_home">
+<div className="fondovideo">
         <video src={videoIntro} autoPlay loop muted />
         <div className="capa"></div>
       </div>
@@ -65,6 +66,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+</div>
     </>
   )
 }
