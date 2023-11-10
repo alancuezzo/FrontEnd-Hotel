@@ -117,8 +117,10 @@ const SignUp = () => {
             <i className="fa-regular fa-calendar"></i>
           </div>
 
+          <div className="contenedor-boton">
           <button type='sumbit' className="btn" disabled={loading && true}>Registrarme</button>
-
+          </div>
+          
           <div className="register-link">
             <p>Ya tienes una cuenta? <NavLink to="/login">Login</NavLink> </p>
           </div>
