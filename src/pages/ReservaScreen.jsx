@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/reserva.css";
 import { crearReserva } from "../helpers/ReservaApi";
+import "../css/reserva.css";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -17,8 +17,6 @@ import Select from '@mui/material/Select';
 import Button from 'react-bootstrap/Button';
 import MessageApp from "../components/MessageApp";
 import { styled } from '@mui/material/styles';
-import { FormText } from "react-bootstrap";
-
 
 
 
@@ -104,7 +102,6 @@ const handleChange = (event) => {
 
   return (
     <>
-    <div className="container-fluid">
   <div className='borde'>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm goldenimg">
@@ -135,7 +132,7 @@ const handleChange = (event) => {
 
         <Col className='calendar'>
           <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
-          <h4 className='ensal' >Entrada</h4>
+          <h4 className='ensal'>Entrada</h4>
       <DatePicker  selected={startDate} onChange={date => setStartDate(date)} className='datepicker'/>
     </LocalizationProvider>
     </div>
@@ -167,7 +164,7 @@ const handleChange = (event) => {
 
 
 <div className="catego" >
-<Box  sx={{width: 250, mt:1, borderColor:'white',  }}>
+<Box  sx={{width: 250, mt:1, borderColor:'white' }}>
       <FormControl fullWidth  sx={{
         '& > :not(style)': { m: 1, width: '25ch', color:'white', borderColor:'white' },
       }}>
@@ -200,15 +197,11 @@ const handleChange = (event) => {
       </Row>
     </Form>
     <div className="boton">
-       <button onClick={handleReservas} disabled={loading && true}  className='button' as="input" type="submit" value="Reservar">Reservar</button>
+       <Button onClick={handleReservas} disabled={loading && true}  className='button' as="input" type="submit" value="Reservar" />
     </div>
-    {resultado?.msg && (
-              <div className="mt-2">
-                <MessageApp mensaje={resultado.msg} />
-              </div>
-            )}
+ 
     </div>
-    </div>
+   
   </>
 )
 }
