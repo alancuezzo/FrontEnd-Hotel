@@ -55,6 +55,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
   const [inputUsuario, setInputUsuario] = useState("");
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
+  const [personas, setPersonas] = useState("");
 
  const [caterogia, setCaterogia] = React.useState('');
 
@@ -67,10 +68,11 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
   setLoading(true);
 
   const datos = {
-    correo: inputNombre,
+    nombre: inputNombre,
     usuario: inputUsuario,
     entrada: startDate,
     salida: endDate,
+    personas: personas,
 
 
   };
@@ -146,11 +148,14 @@ const handleChange = (event) => {
        
     </Col>
    
-    <div className="personas">
+    {/* <div className="personas">
 <CssTextField
            sx={{
             '& > :not(style)': { color:'white' },
           }}
+          
+          name="personas"
+          onChange={date => setPersonas(date)}
           id="custom-css-outlined-input"
           label="Number of people"
           type="number"
@@ -160,7 +165,7 @@ const handleChange = (event) => {
           }}
           variant="standard"
         />
-</div>
+</div> */}
 
 
 <div className="catego" >
@@ -199,7 +204,11 @@ const handleChange = (event) => {
     <div className="boton">
        <Button onClick={handleReservas} disabled={loading && true}  className='button' as="input" type="submit" value="Reservar" />
     </div>
- 
+    {resultado?.msg && (
+              <div className="mt-2">
+                <MessageApp mensaje={resultado.msg} />
+              </div>
+            )}
     </div>
    
   </>
