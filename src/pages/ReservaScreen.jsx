@@ -148,12 +148,12 @@ const handleChange = (event) => {
        
     </Col>
    
-    {/* <div className="personas">
+    <div className="personas">
 <CssTextField
            sx={{
             '& > :not(style)': { color:'white' },
           }}
-          
+          value={personas}
           name="personas"
           onChange={date => setPersonas(date)}
           id="custom-css-outlined-input"
@@ -165,7 +165,7 @@ const handleChange = (event) => {
           }}
           variant="standard"
         />
-</div> */}
+</div>
 
 
 <div className="catego" >
