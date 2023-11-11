@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { crearReserva } from "../helpers/ReservaApi";
 import "../css/reserva.css";
+import { crearReserva } from "../helpers/ReservaApi";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -17,6 +17,8 @@ import Select from '@mui/material/Select';
 import Button from 'react-bootstrap/Button';
 import MessageApp from "../components/MessageApp";
 import { styled } from '@mui/material/styles';
+import { FormText } from "react-bootstrap";
+
 
 
 
@@ -55,7 +57,6 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
   const [inputUsuario, setInputUsuario] = useState("");
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  const [personas, setPersonas] = useState("");
 
  const [caterogia, setCaterogia] = React.useState('');
 
@@ -64,21 +65,17 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
 
  const handleReservas = async (e) => {
   e.preventDefault();
-
-  //ejecutar setLoading
+  
   setLoading(true);
 
   const datos = {
-    nombre: inputNombre,
+    correo: inputNombre,
     usuario: inputUsuario,
     entrada: startDate,
     salida: endDate,
-    personas: personas,
 
 
   };
-
- 
 
   const resp = await crearReserva(datos);
     console.log(resp);
@@ -107,6 +104,7 @@ const handleChange = (event) => {
 
   return (
     <>
+    <div className="container-fluid">
   <div className='borde'>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm goldenimg">
@@ -124,11 +122,12 @@ const handleChange = (event) => {
       <Form onSubmit={handleReservas} className='formcompleto'>
       <Row>
         <div className='formul'>
-        <Col className='formu'>
-        <Form.Control  value={inputNombre} onChange={(e) => setInputNombre(e.target.value)} className='formu1'  type="text" placeholder="Full Name" />
-        </Col>
+       
         <Col className='formu '>
         <Form.Control  value={inputUsuario} onChange={(e) => setInputUsuario(e.target.value)} className='formu1'  type="text" placeholder="Username" />
+        </Col>
+        <Col className='formu'>
+        <Form.Control  value={inputNombre} onChange={(e) => setInputNombre(e.target.value)} className='formu1'  type="text" placeholder="Acompañantes" />
         </Col>
         </div>
        
@@ -137,7 +136,7 @@ const handleChange = (event) => {
 
         <Col className='calendar'>
           <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
-          <h4 className='ensal'>Entrada</h4>
+          <h4 className='ensal' >Entrada</h4>
       <DatePicker  selected={startDate} onChange={date => setStartDate(date)} className='datepicker'/>
     </LocalizationProvider>
     </div>
@@ -151,14 +150,11 @@ const handleChange = (event) => {
        
     </Col>
    
-    <div className="personas">
+    {/* <div className="personas">
 <CssTextField
            sx={{
             '& > :not(style)': { color:'white' },
           }}
-          value={personas}
-          name="personas"
-          onChange={(e)=>{setPersonas(e.target.value)}}
           id="custom-css-outlined-input"
           label="Number of people"
           type="number"
@@ -168,15 +164,15 @@ const handleChange = (event) => {
           }}
           variant="standard"
         />
-</div>
+</div> */}
 
 
 <div className="catego" >
-<Box  sx={{width: 250, mt:1, borderColor:'white' }}>
+<Box  sx={{width: 250, mt:1, borderColor:'white',  }}>
       <FormControl fullWidth  sx={{
         '& > :not(style)': { m: 1, width: '25ch', color:'white', borderColor:'white' },
       }}>
-        <InputLabel id="demo-simple-select-label" color="warning">Categorias</InputLabel>
+        <InputLabel id="demo-simple-select-label" color="warning">Tipo de Habitacion</InputLabel>
         <Select 
           color="warning"
           labelId="demo-simple-select-label"
@@ -205,7 +201,7 @@ const handleChange = (event) => {
       </Row>
     </Form>
     <div className="boton">
-       <Button onClick={handleReservas} disabled={loading && true}  className='button' as="input" type="submit" value="Reservar" />
+       <button onClick={handleReservas} disabled={loading && true}  className='button' as="input" type="submit" value="Reservar">Reservar</button>
     </div>
     {resultado?.msg && (
               <div className="mt-2">
@@ -213,7 +209,7 @@ const handleChange = (event) => {
               </div>
             )}
     </div>
-   
+    </div>
   </>
 )
 }
