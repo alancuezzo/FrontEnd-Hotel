@@ -7,7 +7,6 @@ const DetalleHabitacionPage = ({ habitacion }) => {
       <h1>Detalles de la Habitación</h1>
       <h2>{habitacion.nombre}</h2>
       <p>{habitacion.descripcion}</p>
-      {/* Agrega aquí más detalles de la habitación si es necesario */}
     </div>
   );
 };

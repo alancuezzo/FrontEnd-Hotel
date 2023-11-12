@@ -1,23 +1,28 @@
-body{
-    background-color: black;
-    overflow: hidden;
-    
+
+#root{
+    background-color: #000000;
 }
-.container{
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-    width:1000px;
-    height:600px;
-    padding:50px;
-    background-color: #f5f5f5;
+
+.contenedor_habitacion {
+    background-color: #000000;
+    display: grid;
+    place-items: center; /* Centrar tanto vertical como horizontalmente */
+    height: 100vh;
+}
+
+.contenedor_habitacion .container {
+    position: relative;
+    width: 80vw;
+    height: 90vh;
+    background-color: #000000;
     box-shadow: 5px 10px 20px 1px #675c4671;
 }
+
 #slide{
     width:max-content;
-    margin-top:50px;
+    margin-top:100px;
 }
+
 .item{
     width:200px;
     height:300px;

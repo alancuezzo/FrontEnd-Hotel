@@ -23,30 +23,39 @@ const HabitacionesPage = () => {
     fetchHabitaciones();
   }, []);
 
-
-return (
-    <div className="container">
-      <div id="slide">
-        {habitaciones.map((habitacion, index) => (
-          <div
-            key={habitacion.id}
-            className={`item ${index === 1 ? 'selected' : ''}`}
-            style={{ backgroundImage: `url(${habitacion.imagen})` }}
-          >
-            {/* Resto del código */}
+  return (
+    <>
+      <div className="contenedor_habitacion">
+        <div className="container">
+          <div id="slide">
+            {habitaciones.map((habitacion, index) => (
+              <div
+                key={habitacion.id}
+                className={`item ${index === 1 ? 'selected' : ''}`}
+                style={{ backgroundImage: `url(${habitacion.imagen})` }}
+              >
+                <div className="content">
+                  <div className="name">{habitacion.nombre}</div>
+                  <div className="des">{habitacion.descripcion}</div>
+                  <button className="boton_login">
+                    <a href="#">RESERVAR</a>
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+          <div className="buttons">
+            <button id="prev">
+              <i className="fa-solid fa-angle-left"></i>
+            </button>
+            <button id="next">
+              <i className="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="buttons">
-        <button id="prev">
-          <i className="fa-solid fa-angle-left"></i>
-        </button>
-        <button id="next">
-          <i className="fa-solid fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
+    </>
   );
-  
-        }
+};
+
 export default HabitacionesPage;

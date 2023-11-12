@@ -1,19 +1,17 @@
 const url = "http://localhost:8080/api/habitaciones";
 const token = JSON.parse(localStorage.getItem("token"));
 
-// HabitacionApi.js
 export const getHabitaciones = async (limite = 0, pagina = 0) => {
     try {
       const resp = await fetch(`${url}?limite=${limite}&desde=${pagina}`);
       const data = await resp.json();
   
-      return data; // Asumiendo que las imágenes ya tienen URLs completas
+      return data; 
     } catch (error) {
       console.log(error);
       throw new Error("No se pudo obtener la información de habitaciones");
     }
   };
-  
 
 export const getHabitacionById = async (id) => {
   try {
