@@ -36,8 +36,9 @@ const Home = () => {
                         <a>ÚNETE AHORA</a>
                 </button>
                 <button className="boton_login">
-                        <a>ACCESO</a>
-                </button>
+        <NavLink to="/habitaciones">ACCESO</NavLink> 
+        {/* BORRAR Y CORREGIR ESTA RUTA */}
+      </button>
         </div>
           </div>
           <div className="logo">
