@@ -1,0 +1,43 @@
+:root{
+    --black: #000000;
+    --grisJet: #2F2F2F;
+    --walnutBrown: #675C46;
+    --coyote: #7C6F55;
+    --golden: #BDA871;
+    --goldenEcru: #C3B07E;
+    --goldenClaro: #CDBE95;
+    --white: #FFFFFF;
+}
+
+.body_error {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  .error404-container {
+    text-align: center;
+  }
+  
+  .boton_logup {
+    width: 200px;
+    height: 45px;
+    background: var(--coyote);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: var(--white);
+  }
+  
+  .boton_logup:hover {
+    background-color: var(--walnutBrown);
+  }
+  
