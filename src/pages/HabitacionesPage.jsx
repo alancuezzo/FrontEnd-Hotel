@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Habitacion from '../components/Habitacion';
 import { getHabitaciones } from '../helpers/HabitacionApi';
 import "../css/habitacionespage.css";
 
@@ -21,7 +20,20 @@ const HabitacionesPage = () => {
     };
 
     fetchHabitaciones();
-  }, []);
+
+    // Agrega eventos después de que el componente se haya montado y el DOM esté disponible
+    document.getElementById('next').onclick = function () {
+      let lists = document.querySelectorAll('.item');
+      let clone = lists[0].cloneNode(true);
+      document.getElementById('slide').appendChild(clone);
+    };
+
+    document.getElementById('prev').onclick = function () {
+      let lists = document.querySelectorAll('.item');
+      let clone = lists[lists.length - 1].cloneNode(true);
+      document.getElementById('slide').prepend(clone);
+    };
+  }, []); 
 
   return (
     <>
@@ -34,13 +46,7 @@ const HabitacionesPage = () => {
                 className={`item ${index === 1 ? 'selected' : ''}`}
                 style={{ backgroundImage: `url(${habitacion.imagen})` }}
               >
-                <div className="content">
-                  <div className="name">{habitacion.nombre}</div>
-                  <div className="des">{habitacion.descripcion}</div>
-                  <button className="boton_login">
-                    <a href="#">RESERVAR</a>
-                  </button>
-                </div>
+                {/* Puedes agregar aquí más contenido para cada habitación si lo necesitas */}
               </div>
             ))}
           </div>
