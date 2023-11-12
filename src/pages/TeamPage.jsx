@@ -18,7 +18,7 @@ const TeamPage = () => {
         </div>
         <div className="card">
           <div className="cover_card">
-            <img src="" alt="Foto" />
+            <img src="https://trello.com/1/cards/65282156c55357190413c8af/attachments/6537290405c6c596ddbcf104/previews/6537290505c6c596ddbcf1fb/download/1692390073755.jpg" alt="Foto" />
           </div>
           <h2>EMILIA PIGINI</h2>
           <p>
