@@ -1,6 +1,7 @@
 *{
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-  
+  margin: 0;
+  padding: 0;
 }
 :root {
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
@@ -20,13 +21,13 @@
   }
 
 
-  body {
+  .container-fluid {
     margin: 0;
     display: flex;
     place-items: center;
     justify-content: center;
     align-items: center;
-    min-width: 320px;
+    min-width: 260px;
     min-height: 100vh;
     background-image: url(https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/madinat-jumeirah/al-qasr-at-madinat-jumeirah/hero/jumeirah-al-qasr-entrance-aerial-drone_landscape.jpg?w=2080);
     background-repeat: no-repeat;
@@ -39,7 +40,7 @@
     padding-left: 25px;
     height: 680px;
     width: 400px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.112);
     backdrop-filter: blur(10px);
     color: #ffff;
     border: 1px solid #ffffff33;
@@ -55,14 +56,33 @@
     position: relative;
     left: -15px;
     
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
   }
   .formcompleto{
-   display: flex;
+   width: auto;
    
+  }
+
+  .calendario{
+    display: flex;
+   width: 100%;
+  width: 100%;
+  gap: 60px;  
   }
   .calendar{
     display: flex;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+    
   }
+  .calendar1{
+    margin-right: 0px;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+
   
   .formu{
    display: flex;
@@ -77,19 +97,18 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-   
-     
-    
+  
    }
+
 
    .formu1::placeholder{
     color: white;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
    }
 
    
   .formu .formu1 {
     font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-   
     font-size: 16px;
     width: 100%;
     height: 100%;
@@ -98,18 +117,19 @@
     border: none;
     outline: none;
     border: 2px solid rgba(255, 255, 255, .2);
-    /* border-radius: 40px; */
+    border-radius: 5px;
     padding: 20px 45px 20px 20px;
+  }
+ 
+  .formu .formu1:hover{
+    background-color: transparent;
+    border-color: black;
   }
 
   .formu .formu2{
     margin-bottom: 10px; }
 
-  Col.calendar {
-   width: 100px;
-   
-   
-}
+
 
 .goldenimg1{
 width: 70%;
@@ -122,10 +142,7 @@ margin-top: 5px;
 margin-bottom: 0%;
 }
 
-.cal{
-  margin: 0%;
-  padding: 2%;
-}
+
 
 .box {
   display: flex;
@@ -133,13 +150,7 @@ margin-bottom: 0%;
   width: 100%;
 }
 
-.personas{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 5%;
-  color: aliceblue;
-}
+
 
 .catego{
   width: 100%;
@@ -176,23 +187,32 @@ margin-bottom: 0%;
   margin-top: 5%;
 }
 
+.boton{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  
+}
+
+button:hover{
+  background-color: #675C46;
+}
+
 .button {
-  /* border-radius: 8px; */
-  border: 1px solid #ffff;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  background-color: transparent;
+  width: 200px;
+  height: 45px;
+  background: #7C6F55;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding-top: 3%;
+  color: #FFFFFF;
 }
-.button:hover {
-  border-color: goldenrod;
-  background-color: goldenrod;
-}
+
 .button:focus,
 .button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-

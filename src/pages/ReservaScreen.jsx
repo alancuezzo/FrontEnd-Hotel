@@ -52,11 +52,11 @@ const CssTextField = styled(TextField,Select)({
 const ReservasScreen = (Reservacion, guardarReserva) => {
   
   const navigate = useNavigate();
-
+  const [formValues, setFormValues] = useState({ entrada: "", salida: "" });
   const [inputNombre, setInputNombre] = useState("");
   const [inputUsuario, setInputUsuario] = useState("");
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  // const [startDate, setStartDate] = useState(null);
+  // const [endDate, setEndDate] = useState(null);
 
  const [caterogia, setCaterogia] = React.useState('');
 
@@ -71,10 +71,8 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
   const datos = {
     correo: inputNombre,
     usuario: inputUsuario,
-    entrada: startDate,
-    salida: endDate,
-
-
+ 
+    
   };
 
   const resp = await crearReserva(datos);
@@ -133,38 +131,47 @@ const handleChange = (event) => {
        
 
       
-
-        <Col className='calendar'>
-          <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
+<div className="calendario">
+       
+          <div className="cal"> 
           <h4 className='ensal' >Entrada</h4>
-      <DatePicker  selected={startDate} onChange={date => setStartDate(date)} className='datepicker'/>
-    </LocalizationProvider>
+          <div className="input-group mb-3">
+        <input
+          type="date"
+          className="form-control calendar1"
+          placeholder="Username"
+          aria-label="Username"
+          id="entrada"
+          value={formValues.entrada}
+          onChange={(e) => {
+            setFormValues({ ...formValues, [e.target.id]: e.target.value });
+          }}
+        />
+      </div>
     </div>
     
     
-    <div className="cal"> <LocalizationProvider className='datepicker'  label="Responsive variant" dateAdapter={AdapterDayjs}>
-          <h4 className='ensal'>Salida</h4>
-      <DatePicker selected={endDate} onChange={date => setEndDate(date)} className='datepicker' />
-    </LocalizationProvider>
+    
+          <div className="cal"> 
+          <h4 className='ensal' >Salida</h4>
+          <div className="input-group mb-3">
+        <input
+          type="date"
+          className="form-control calendar1"
+          placeholder="Username"
+          aria-label="Username"
+          id="salida"
+          value={formValues.salida}
+          onChange={(e) => {
+            setFormValues({ ...formValues, [e.target.id]: e.target.value });
+          }}
+        />
+      </div>
     </div>
        
-    </Col>
-   
-    {/* <div className="personas">
-<CssTextField
-           sx={{
-            '& > :not(style)': { color:'white' },
-          }}
-          id="custom-css-outlined-input"
-          label="Number of people"
-          type="number"
-          required
-          InputLabelProps={{
-            shrink: true,
-          }}
-          variant="standard"
-        />
-</div> */}
+    
+    </div>
+ 
 
 
 <div className="catego" >
@@ -172,7 +179,7 @@ const handleChange = (event) => {
       <FormControl fullWidth  sx={{
         '& > :not(style)': { m: 1, width: '25ch', color:'white', borderColor:'white' },
       }}>
-        <InputLabel id="demo-simple-select-label" color="warning">Tipo de Habitacion</InputLabel>
+        <InputLabel id="demo-simple-select-label" color="warning">Habitaciones</InputLabel>
         <Select 
           color="warning"
           labelId="demo-simple-select-label"
