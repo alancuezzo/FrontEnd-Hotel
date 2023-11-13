@@ -5,45 +5,45 @@ import { crearReserva } from "../helpers/ReservaApi";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import TextField from '@mui/material/TextField';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+// import TextField from '@mui/material/TextField';
+// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+// import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import MessageApp from "../components/MessageApp";
-import { styled } from '@mui/material/styles';
-import { FormText } from "react-bootstrap";
+// import { styled } from '@mui/material/styles';
+// import { FormText } from "react-bootstrap";
 
 
 
 
 
-const CssTextField = styled(TextField,Select)({
-  '& label.Mui-focused': {
-    color: '#ffff',
-  },
-  '& .MuiInput-underline:after': {
-    borderBottomColor: '#ffff',
-  },
-  '& .MuiOutlinedInput-root': {
-    '& fieldset': {
-      borderColor: '#ffff',
+// const CssTextField = styled(TextField,Select)({
+//   '& label.Mui-focused': {
+//     color: '#ffff',
+//   },
+//   '& .MuiInput-underline:after': {
+//     borderBottomColor: '#ffff',
+//   },
+//   '& .MuiOutlinedInput-root': {
+//     '& fieldset': {
+//       borderColor: '#ffff',
       
-    },
-    '&:hover fieldset': {
-      borderColor: '#ffff',
-    },
-    '&.Mui-focused fieldset': {
-      borderColor: '#ffff',
+//     },
+//     '&:hover fieldset': {
+//       borderColor: '#ffff',
+//     },
+//     '&.Mui-focused fieldset': {
+//       borderColor: '#ffff',
       
-    },
-  },
-});
+//     },
+//   },
+// });
 
 
 
@@ -55,8 +55,6 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
   const [formValues, setFormValues] = useState({ entrada: "", salida: "" });
   const [inputNombre, setInputNombre] = useState("");
   const [inputUsuario, setInputUsuario] = useState("");
-  // const [startDate, setStartDate] = useState(null);
-  // const [endDate, setEndDate] = useState(null);
 
  const [caterogia, setCaterogia] = React.useState('');
 
@@ -131,14 +129,6 @@ const handleChange = (event) => {
        
 
       
-<<<<<<< HEAD
-
-        <Col className='calendar'>
-          <div className="cal"> <LocalizationProvider className='datepicker' label="Responsive variant" dateAdapter={AdapterDayjs}>
-          <h4 className='ensal' >Entrada</h4>
-      <DatePicker  selected={startDate} onChange={date => setStartDate(date)} className='datepicker'/>
-    </LocalizationProvider>
-=======
 <div className="calendario">
        
           <div className="cal"> 
@@ -156,7 +146,6 @@ const handleChange = (event) => {
           }}
         />
       </div>
->>>>>>> reservas
     </div>
     
     
