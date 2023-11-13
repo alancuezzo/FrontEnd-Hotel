@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { authLogin } from "../helpers/ApiLogin";
 import MessageApp from "../components/MessageApp";
+// import Swal from 'sweetalert2'
 import "../css/login.css";
-import { NavLink } from "react-router-dom";
 
 
 const Login = ({ iniciarSesion, guardarUsuario }) => {
@@ -12,7 +13,7 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
 
   const [inputCorreo, setInputCorreo] = useState("");
   const [inputPassword, setInputPassword] = useState("");
-  const [resultado, setResultado] = useState(null);
+  const [resultado, setResultado] = useState("");
   const [loading, setLoading] = useState(false);
 
 
@@ -29,6 +30,10 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
     const resp = await authLogin(datos);
     console.log(resp);
 
+    setResultado(resp);
+
+    console.log(resultado);
+
     if (resp?.token) {
 
       localStorage.setItem("token", JSON.stringify(resp.token));
@@ -37,20 +42,16 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
 
       guardarUsuario(resp.usuario);
 
-
-      setInputCorreo("");
-
-      setInputPassword("");
-
-      setLoading(false);
-
-      Navigate("/");
-
-      setResultado(resp);
     }
+    setInputCorreo("");
+
+    setInputPassword("");
 
 
+    setLoading(false);
 
+
+    Navigate("/");
   };
   return (
     <>
@@ -77,16 +78,19 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
               <NavLink to="*">Restablecer Contraseña</NavLink>
             </div>
             <div className="contenedor-boton">
-            <button type='sumbit' className="btn" disabled={loading && true}>login</button>
+              <button type='sumbit' className="btn" disabled={loading && true}>Login</button>
             </div>
             <div className="register-link">
               <p>No tienes una cuenta?</p><NavLink to="/SignUp"> Registrarme</NavLink>
             </div>
           </form>
-
-          {resultado?.msg && (
-            <MessageApp mensaje={resultado.msg} />
-          )}
+          <div id="mensajeResp">
+            {resultado?.msg && (
+              <div className="mt-2">
+                <MessageApp mensaje={resultado} />
+              </div>
+            )}
+          </div>
         </div>
       </div >
     </>
