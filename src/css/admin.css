@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+}
+
+.contenedor_body {
+    font-family: jumeirah-font2, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor_header {
+    background-color: #000000;
+    color: #CDBE95;
+    padding: 10px;
+    text-align: center;
+}
+
+.opciones {
+    background-color: #CDBE95;
+    overflow: hidden;
+}
+
+.opciones button {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.opciones button:hover {
+    background-color: #7C6F55;
+}
+
+section {
+    padding: 20px;
+}

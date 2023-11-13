@@ -7,6 +7,7 @@ import Home from "../pages/Home.jsx";
 import ReservasScreen from "../pages/ReservaScreen.jsx";
 // import ProtectedRoutesAdmin from "../routes/ProtectedRoutesAdmin";
 import Footer from "../components/Footer";
+import Admin from "../pages/Admin.jsx";
 
 const RoutesDos = ({ cerrarSesion, user }) => {
   return (
@@ -15,6 +16,7 @@ const RoutesDos = ({ cerrarSesion, user }) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reservas" element={<ReservasScreen />} />
+        <Route path="/admin" element={<Admin/>} />
         {/* <Route path="/about" element={<AboutScreen />} /> */}
         {/* <Route
           path="/admin"
