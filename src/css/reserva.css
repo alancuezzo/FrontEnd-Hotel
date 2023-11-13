@@ -1,22 +1,185 @@
+<<<<<<< HEAD
 
 :root {
   line-height: 1.5;
   font-weight: 400;
+=======
+*{
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+ 
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+>>>>>>> reservas
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+<<<<<<< HEAD
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+=======
+  .container-fluid {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 260px;
+    min-height: 100vh;
+    background-image: url(https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/madinat-jumeirah/al-qasr-at-madinat-jumeirah/hero/jumeirah-al-qasr-entrance-aerial-drone_landscape.jpg?w=2080);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .borde{
+    padding: 10px;
+    padding-left: 25px;
+    height: 680px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.112);
+    backdrop-filter: blur(10px);
+    color: #ffff;
+    border: 1px solid #ffffff33;
+    border-radius: 10px;
+    padding: 30px 40px;
+    
+  }
+
+  .texto {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    left: -15px;
+    
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  }
+  .formcompleto{
+   width: auto;
+   
+  }
+
+  .calendario{
+    display: flex;
+   width: 100%;
+  width: 100%;
+  gap: 60px;  
+  }
+  .calendar{
+    display: flex;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+    
+  }
+  .calendar1{
+    margin-right: 0px;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
 
 
+  
+  .formu{
+   display: flex;
+   justify-content: center;
+   width: 90%;
+   margin-bottom: 10px;
+    
+   
+  }
+  .formul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  
+   }
+
+
+   .formu1::placeholder{
+    color: white;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+   }
+
+   
+  .formu .formu1 {
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    color: #ffff;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    padding: 20px 45px 20px 20px;
+  }
+ 
+  .formu .formu1:hover{
+    background-color: transparent;
+    border-color: black;
+  }
+
+  .formu .formu2{
+    margin-bottom: 10px; }
+
+
+>>>>>>> reservas
+
+
+<<<<<<< HEAD
 .container-fluid {
   margin: 0;
+=======
+h4 {
+margin-top: 5px;
+margin-bottom: 0%;
+}
+
+
+
+.box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+.catego{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.catego1{
+>>>>>>> reservas
   display: flex;
   place-items: center;
   justify-content: center;
@@ -95,6 +258,7 @@
   border: none;
   outline: none;
   border: 2px solid rgba(255, 255, 255, .2);
+<<<<<<< HEAD
   border-radius: 5px;
   padding: 20px 45px 20px 20px;
 }
@@ -169,6 +333,11 @@ border: 2px solid rgba(255, 255, 255, .2);
 border-radius: 40px;
 padding: 10px 15px 10px 10px;
 
+=======
+  /* border-radius: 40px; */
+  padding: 10px 15px 10px 10px;
+  
+>>>>>>> reservas
 }
 
 .boton{
@@ -183,7 +352,20 @@ button:hover{
 background-color: #675C46;
 }
 
+.boton{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  
+}
+
+button:hover{
+  background-color: #675C46;
+}
+
 .button {
+<<<<<<< HEAD
 width: 200px;
 height: 45px;
 background: #7C6F55;
@@ -194,9 +376,25 @@ justify-content: center;
 margin: 5px;
 padding-top: 3%;
 color: #FFFFFF;
+=======
+  width: 200px;
+  height: 45px;
+  background: #7C6F55;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding-top: 3%;
+  color: #FFFFFF;
+>>>>>>> reservas
 }
 
 .button:focus,
 .button:focus-visible {
+<<<<<<< HEAD
 outline: 4px auto -webkit-focus-ring-color;
+=======
+  outline: 4px auto -webkit-focus-ring-color;
+>>>>>>> reservas
 }
