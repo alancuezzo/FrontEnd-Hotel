@@ -120,7 +120,9 @@ const SignUp = () => {
               <i className="fa-regular fa-calendar"></i>
             </div>
 
-            <button type='sumbit' className="btn" id='botonRegister' disabled={loading && true}>Registrarme</button>
+            <div className="contenedor-boton">
+              <button type='sumbit' className="btn" disabled={loading && true}>Registrarme</button>
+            </div>
 
             <div className="register-link">
               <p>Ya tienes una cuenta? <NavLink to="/login">Login</NavLink> </p>
@@ -128,7 +130,9 @@ const SignUp = () => {
             {resultado?.msg && (
               <MessageApp mensaje={resultado.msg} />
             )}
-
+            {resultado?.error && (
+              <MessageApp mensaje={resultado.error} />
+            )}
           </form>
 
         </div>

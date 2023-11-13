@@ -12,7 +12,10 @@
 *{
     padding: 0;
     margin: 0;
-    /* background-color: #000000; */
+}
+
+.contenedor_home{
+    background-color: #000000;
 }
 
 .fondovideo{
@@ -43,6 +46,7 @@ video {
 .ofertas {
     color: #CDBE95;
     text-align: center;
+    background-color: #000000;
 }
 
 .ofertas_titulo h3{
@@ -51,6 +55,7 @@ video {
     font-size: 18px;
     font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
     margin-top: 30px;
+    
 }
 
 .ofertas_titulo h2{
