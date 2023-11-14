@@ -19,6 +19,7 @@
 
 .container-fluid {
     margin: 0;
+    padding: 0;
     display: flex;
     place-items: center;
     justify-content: center;
@@ -33,7 +34,7 @@
 
 
 .wrapper {
-    width: 420px;
+    min-width: 320px;
     background-color: rgba(0, 0, 0, 0.112);
     backdrop-filter: blur(10px);
     color: #ffff;
@@ -88,6 +89,7 @@
     align-items: center;
     font-size: 14.5px;
     margin: -15px 0 15px;
+    gap: 80px;
 }
 
 .remember-forgot label input {
@@ -96,15 +98,30 @@
     margin-right: 3px;
 }
 
+.remember-forgot input {
+    width: 12px;
+    accent-color: #ffff;
+    margin-top: 3px;
+}
+
 .remember-forgot a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: #ffff;
     text-decoration: none;
-
 }
 
 .remember-forgot a:hover {
     text-decoration: underline;
     color: #CDBE95;
+}
+
+.remember-forgot label {
+    width: 12px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .contenedor-boton {
@@ -160,4 +177,16 @@
     display: flex;
     justify-content: center;
     margin-left: 70px;
+}
+
+#mensajeResp {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 385px) {
+    .remember-forgot a {
+        margin-left: 50px
+    }
 }

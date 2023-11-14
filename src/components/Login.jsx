@@ -85,11 +85,12 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
             </div>
           </form>
           <div id="mensajeResp">
-            {resultado?.msg && (
+            {/* {resultado?.msg && (
               <div className="mt-2">
                 <MessageApp mensaje={resultado} />
               </div>
-            )}
+            )} */}
+
           </div>
         </div>
       </div >

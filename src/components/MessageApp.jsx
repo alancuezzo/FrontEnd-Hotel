@@ -15,12 +15,7 @@ const MessageApp = ({ mensaje }) => {
 
   return (
     <div className={`alert ${color} text-center`} role="alert">
-      {/* {mensaje} */}
-      {Swal.fire({
-        title: "Good job!",
-        text: "You clicked the button!",
-        icon: "success"
-      })};
+      {mensaje}
     </div>
   );
 };
