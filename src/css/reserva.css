@@ -156,11 +156,31 @@ margin-bottom: 0%;
 }
 
 
+
+.hab{
+  background-color: transparent;
+  border: none;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.hab option{
+  background-color: black;
+  width: 100%;
+}
+.catego1 .catego2{
+  border: none;
+  width: 100%;
+  
+}
+
 .catego1{
   display: flex;
   place-items: center;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   min-width: 320px;
   min-height: 100vh;
   background-image: url(https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/madinat-jumeirah/al-qasr-at-madinat-jumeirah/hero/jumeirah-al-qasr-entrance-aerial-drone_landscape.jpg?w=2080);
@@ -226,6 +246,10 @@ margin-bottom: 0%;
 
  
 .formu .formu1 {
+=======
+  width: 33%;
+  margin-top: 10%;
+>>>>>>> reservas
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
   font-size: 16px;
   width: 100%;
@@ -240,6 +264,7 @@ margin-bottom: 0%;
   
 }
 
+<<<<<<< HEAD
 .boton{
 display: flex;
 justify-content: center;
@@ -251,14 +276,19 @@ font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 button:hover{
 background-color: #675C46;
 }
+=======
+
+>>>>>>> reservas
 
 .boton{
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 30%;
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-  
 }
+
+
 
 button:hover{
   background-color: #675C46;
@@ -275,6 +305,7 @@ button:hover{
   margin: 5px;
   padding-top: 3%;
   color: #FFFFFF;
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 
 .button:focus,
