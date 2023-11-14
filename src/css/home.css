@@ -22,11 +22,12 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    position: relative;
 }
 
 video {
     position: absolute;
-    top: -10px;
+    top: -20px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -35,7 +36,7 @@ video {
 
 .capa{
     position: absolute;
-    top: 0;
+    top: auto;
     left: 0;
     width: 100%;
     height: 100%;
@@ -55,6 +56,7 @@ video {
     font-size: 18px;
     font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
     margin-top: 30px;
+    
 }
 
 .ofertas_titulo h2{
@@ -81,7 +83,7 @@ video {
 
 .capa_banner{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
     z-index: 3;
     position: absolute;
@@ -118,7 +120,6 @@ video {
 .banner_texto h2{
     font-size: 2vw;
     background: none;
-    font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif; 
 }
 
 .banner_texto h4{
@@ -138,7 +139,6 @@ video {
 .banner_texto h3{
     font-size: 25px;
     background: none;
-    font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif; 
 }
 
 .banner_texto p{
@@ -166,7 +166,6 @@ video {
     justify-content: center;
     margin: 20px;
     color: #FFFFFF;
-    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 
 .boton_login{
@@ -179,7 +178,6 @@ video {
     justify-content: center;
     margin: 20px;
     color: #FFFFFF;
-    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 
 button:hover{
@@ -192,7 +190,6 @@ button:hover{
     padding-top: 10px;
     color: #FFFFFF;
     background: none;
-    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 
 .small-image{
@@ -207,13 +204,8 @@ button:hover{
     background: none;
     color: #CDBE95;
     letter-spacing: 1px;
-    margin: 100px 0 0px 0;
+    margin: 100px 0 50px 0;
     text-align: center;
-    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-}
-
-.premios p{
-    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 @media (max-width: 890px) {
     .fondovideo{

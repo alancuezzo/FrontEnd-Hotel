@@ -15,7 +15,7 @@ return (
                 </div>
                 <div className="box">
                     <ul>
-                        <li><Link to="*">ACERCA DEL GRUPO GOLDEN PALACE</Link></li>
+                        <li><Link to="*">ACERCA DE GOLDEN PALACE</Link></li>
                         <li><Link to="*">DESARROLLO HOTELERO</Link></li>
                         <li><Link to="*">CENTRO DE PRENSA</Link></li>
                         <li><Link to="*">CARRERAS</Link></li>
@@ -24,15 +24,6 @@ return (
                         <li><Link to="*">TÉRMINOS Y CONDICIONES</Link></li>
                         <li><Link to="*">AVISO DE COOKIES</Link></li>
                     </ul>
-                </div>
-                <div className="box">
-                    <h2>Suscríbete al boletín de Golden Palace</h2>
-                    <div className="red-social">
-                        <Link to="https://www.twitch.com/" className="fa fa-twitch"></Link>
-                        <Link to="https://www.facebook.com/" className="fa fa-facebook"></Link>
-                        <Link to="https://www.instagram.com/" className="fa fa-instagram"></Link>
-                        <Link to="https://www.youtube.com/" className="fa fa-youtube"></Link>
-                    </div> 
                 </div>
             </div>
             <div className="grupo-2">
