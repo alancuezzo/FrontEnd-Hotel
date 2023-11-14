@@ -206,7 +206,7 @@ button:hover{
     margin: 100px 0 50px 0;
     text-align: center;
 }
-@media (max-width: 8908px) {
+@media (max-width: 890px) {
     .fondovideo{
         width: 100vw;
         height: auto;
