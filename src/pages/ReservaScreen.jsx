@@ -50,7 +50,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
   const [entrada, setEntrada] = useState('');
   const [salida, setSalida] = useState('');
 
-  
+  const [categorias, setCategorias] = useState(null);
 
   const [resultado, setResultado] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -71,7 +71,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
       usuario: inputUsuario,
       entrada: entrada,
       salida: salida,
-      categorias: categorias,
+      categoria: categorias,
     };
 
     const resp = await crearReserva(datos);
@@ -120,7 +120,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
                     onChange={(e) => setInputNombre(e.target.value)}
                     className="formu1"
                     type="text"
-                    placeholder="Full Name"
+                    placeholder="Acompañantes"
                   />
                 </Col>
                 <Col className="formu ">
@@ -129,7 +129,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
                     onChange={(e) => setInputUsuario(e.target.value)}
                     className="formu1"
                     type="text"
-                    placeholder="Username"
+                    placeholder="Nombre de Usuario"
                   />
                 </Col>
               </div>
@@ -172,6 +172,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
                     <Form.Label>Habitaciones</Form.Label>
                     <Form.Select className="hab" defaultValue="Choose...">
                     <InputCategoria categoriaSeleccionada={categoriaSeleccionada}/>
+                    
                     </Form.Select>
                   </Form.Group>
                 </div>
