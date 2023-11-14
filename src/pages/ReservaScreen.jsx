@@ -17,7 +17,7 @@ import Select from "@mui/material/Select";
 import Button from "react-bootstrap/Button";
 import MessageApp from "../components/MessageApp";
 import { styled } from "@mui/material/styles";
-import { FormSelect, FormText } from "react-bootstrap";
+import { FormText } from "react-bootstrap";
 import  InputCategoria  from "../components/InputCategoria";
 
 const CssTextField = styled(
@@ -170,9 +170,9 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
                 <div className="catego catego1">
                   <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>Habitaciones</Form.Label>
-                    <FormSelect className="hab" defaultValue="Choose...">
+                    <Form.Select className="hab" defaultValue="Choose...">
                     <InputCategoria categoriaSeleccionada={categoriaSeleccionada}/>
-                    </FormSelect>
+                    </Form.Select>
                   </Form.Group>
                 </div>
               </div>
