@@ -215,7 +215,7 @@ button:hover{
 .premios p{
     font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
-@media (max-width: 8908px) {
+@media (max-width: 890px) {
     .fondovideo{
         width: 100vw;
         height: auto;
