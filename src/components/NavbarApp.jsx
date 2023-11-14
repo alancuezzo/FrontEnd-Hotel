@@ -14,7 +14,7 @@ const NavBar = () => {
                 </div>
                 <div className="nav_inferior">
                     <div >
-                        <img className="w-50" src={logo} alt="Logo del hotel"/>
+                        <img className="imghotel" src={logo} alt="Logo del hotel"/>
                     </div>
                     <ul className="nav_links">
                         <li><NavLink to="*">GALERIA</NavLink>

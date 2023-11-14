@@ -70,7 +70,7 @@ ul {
 }
 
 li {
-    padding-right: 65px;
+    padding-right: 35px;
     padding-top: 18px;
 }
 
@@ -85,6 +85,11 @@ li a:hover{
     color: #CDBE95;
 }
 
+.imghotel{
+    width: 100px;
+    margin-right: 200px;
+    margin-left: 50px;
+}
 
 .nav_inferior .boton_reservas{
     width: 200px;
@@ -95,7 +100,7 @@ li a:hover{
     cursor: pointer;
     display: flex;
     justify-content: center;
-    margin-left: 400px;
+    margin-left: 300px;
     margin-top: 3px;
 }
 
