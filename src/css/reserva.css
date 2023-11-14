@@ -160,14 +160,32 @@ margin-bottom: 0%;
 }
 
 
+
+.hab{
+  background-color: transparent;
+  border: none;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.hab option{
+  background-color: black;
+  width: 100%;
+}
+.catego1 .catego2{
+  border: none;
+  width: 100%;
+  
+}
+
 .catego1{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  margin-top: 5%;
+  width: 33%;
+  margin-top: 10%;
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-  font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif;
   font-size: 16px;
   /* height: 100%; */
   color: #ffff;
@@ -180,20 +198,17 @@ margin-bottom: 0%;
   
 }
 
-.boton{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 5%;
-}
+
 
 .boton{
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 30%;
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-  
 }
+
+
 
 button:hover{
   background-color: #675C46;
@@ -210,6 +225,7 @@ button:hover{
   margin: 5px;
   padding-top: 3%;
   color: #FFFFFF;
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 
 .button:focus,
