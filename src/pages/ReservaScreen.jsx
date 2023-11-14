@@ -172,7 +172,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
               <div className="catego">
                 <div className="catego border-0 catego1">
                   <Form.Group as={Col} controlId="formGridState">
-                    <Form.Label className="text-center w-100 text-lg">Habitaciones</Form.Label>
+                    <Form.Label className="text-center w-100 ">Habitaciones</Form.Label>
                     <Form.Select className="hab bg-transparent " defaultValue="Choose...">
                     <InputCategoria  categoriaSeleccionada={categoriaSeleccionada}/>
                     
