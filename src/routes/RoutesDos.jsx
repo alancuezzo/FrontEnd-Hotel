@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-// import NavbarApp from "../components/NavbarApp";
+import NavbarApp from "../components/NavbarApp";
 // import AboutScreen from "../pages/AboutScreen";
 // import AdminScreen from "../pages/AdminScreen";
 // import ErrorScreen from "../pages/ErrorScreen";
@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 const RoutesDos = ({ cerrarSesion, user }) => {
   return (
     <>
-      {/* <NavbarApp cerrarSesion={cerrarSesion} user={user} /> */}
+      <NavbarApp cerrarSesion={cerrarSesion} user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reservas" element={<ReservasScreen />} />
