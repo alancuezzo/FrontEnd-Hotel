@@ -55,6 +55,9 @@
     margin: 40px 0 0 2px;
     font-size: 18px;
     letter-spacing: 0;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+    position: absolute;
+    
 }
 
 .pie-pagina .grupo-1 .red-social a{
@@ -64,8 +67,7 @@
     height: 50px;
     line-height: 50px;
     color: #fff;
-    margin: 35px 20px 0 15px;
- 
+    margin: 100px 20px 0 15px;
     background-color: #0000004a;
     text-align: center;
     font-size: 18px;
@@ -85,6 +87,7 @@
 .pie-pagina .grupo-2 small{
     font-size: 13px;
     letter-spacing: 2px;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 
 @media screen and (max-width:768px){

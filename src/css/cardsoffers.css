@@ -66,11 +66,14 @@ button:hover{
     text-decoration: none;
     padding-top: 10px;
     background: none;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
 
 .card_boton{
     margin-bottom: 20px;
 }
+
+li{font-family: TFArrow,Times New Roman,Times,Baskerville,Georgia,serif; }
 
 @media (max-width: 768px) {
     .card{
