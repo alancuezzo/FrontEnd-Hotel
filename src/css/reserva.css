@@ -67,12 +67,13 @@
     display: flex;
    width: 100%;
   width: 100%;
-  gap: 60px;  
+  gap: 5px;  
+ 
   }
   .calendar{
     display: flex;
     font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-    
+  
   }
   .calendar1{
     margin-right: 0px;
@@ -80,6 +81,8 @@
     width: 100%;
     height: 100%;
     background-color: transparent;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+    
   }
 
 
@@ -97,7 +100,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-  
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
    }
 
 
@@ -134,7 +137,7 @@
 .goldenimg1{
 width: 70%;
 position: relative;
-left: 50px;
+left: 1px;
 }
 
 h4 {
@@ -148,6 +151,7 @@ margin-bottom: 0%;
   display: flex;
   justify-content: center;
   width: 100%;
+  
 }
 
 
@@ -156,7 +160,7 @@ margin-bottom: 0%;
   width: 100%;
   display: flex;
   justify-content: center;
-  
+ 
 }
 
 
@@ -170,20 +174,33 @@ margin-bottom: 0%;
 }
 
 .hab option{
-  background-color: black;
+  background-color: transparent;
   width: 100%;
+  
 }
 .catego1 .catego2{
   border: none;
   width: 100%;
   
 }
-
+.ensal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  color: #ffff;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0px;
+}
 .catego1{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33%;
+  width: 80%;
   margin-top: 10%;
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
   font-size: 16px;
@@ -204,8 +221,9 @@ margin-bottom: 0%;
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 30%;
+  margin-top: 10%;
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  
 }
 
 
@@ -226,6 +244,7 @@ button:hover{
   padding-top: 3%;
   color: #FFFFFF;
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  
 }
 
 .button:focus,

@@ -64,10 +64,10 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
     //ejecutar setLoading
     setLoading(true);
 
-    
+
 
     const datos = {
-      correo: inputNombre,
+      acompañantes: inputNombre,
       usuario: inputUsuario,
       entrada: entrada,
       salida: salida,
@@ -114,16 +114,8 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
           <form onSubmit={handleReservas} className="formcompleto">
             <Row>
               <div className="formul">
-                <Col className="formu">
-                  <Form.Control
-                    value={inputNombre}
-                    onChange={(e) => setInputNombre(e.target.value)}
-                    className="formu1"
-                    type="text"
-                    placeholder="Acompañantes"
-                  />
-                </Col>
-                <Col className="formu ">
+
+              <Col className="formu ">
                   <Form.Control
                     value={inputUsuario}
                     onChange={(e) => setInputUsuario(e.target.value)}
@@ -132,6 +124,17 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
                     placeholder="Nombre de Usuario"
                   />
                 </Col>
+
+                <Col className="formu"> 
+                  <Form.Control
+                    value={inputNombre}
+                    onChange={(e) => setInputNombre(e.target.value)}
+                    className="formu1"
+                    type="text"
+                    placeholder="Acompañantes"
+                  />
+                </Col>
+               
               </div>
 
               <div className="calendario">
@@ -140,7 +143,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
                   <div className="input-group mb-3">
                     <input
                       type="date"
-                      className="form-control calendar1"
+                      className="form-control calendar1 bg-transparent"
                       placeholder="Username"
                       aria-label="Username"
                       id="entrada"
@@ -155,7 +158,7 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
                   <div className="input-group mb-3">
                     <input
                       type="date"
-                      className="form-control calendar1"
+                      className="form-control calendar1 bg-transparent"
                       placeholder="Username"
                       aria-label="Username"
                       id="salida"
@@ -167,11 +170,11 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
               </div>
 
               <div className="catego">
-                <div className="catego catego1">
+                <div className="catego border-0 catego1">
                   <Form.Group as={Col} controlId="formGridState">
-                    <Form.Label>Habitaciones</Form.Label>
-                    <Form.Select className="hab" defaultValue="Choose...">
-                    <InputCategoria categoriaSeleccionada={categoriaSeleccionada}/>
+                    <Form.Label className="text-center w-100 text-lg">Habitaciones</Form.Label>
+                    <Form.Select className="hab bg-transparent " defaultValue="Choose...">
+                    <InputCategoria  categoriaSeleccionada={categoriaSeleccionada}/>
                     
                     </Form.Select>
                   </Form.Group>
