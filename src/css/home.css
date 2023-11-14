@@ -215,7 +215,7 @@ button:hover{
 .premios p{
     font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 }
-@media (max-width: 878px) {
+@media (max-width: 8908px) {
     .fondovideo{
         width: 100vw;
         height: auto;
@@ -336,6 +336,73 @@ button:hover{
     }
 
 }
+
+
+
+
+@media (max-width: 330px) {
+    .ofertas_titulo h3{
+        font-size: 13px;
+    }
+
+    .ofertas_titulo h2{
+        font-size: 20px;
+    }
+    
+    .descripcion_banner{
+        margin-top: 50px;
+        display: block;
+        margin:  15px;
+    }
+    
+    .banner_texto{
+        margin-left: 0px;
+    }
+
+    .banner_texto p {
+       font-size: 12px;
+       margin: 3px;
+    }
+
+    .banner_texto h4{
+        font-size: 13px;
+        background: none;
+        font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+        color: #CDBE95;
+        letter-spacing: 1px;
+        margin-bottom: 50px;
+    }
+    
+    .banner_texto h3{
+        font-size: 15px;
+    }
+    
+    .banner_texto h3{
+        font-size: 15px;
+    }
+
+    .banner_boton{
+        margin-top: 100px;
+        background: none;
+        display: block;
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+    }
+    
+    .boton_logup{
+        margin: 10px;
+    }
+    
+    .boton_login{
+        margin: 10px;
+    }
+    
+    .premios{
+        margin:200px 0 5px 0;
+    }
+
+}
+
 
 
 
