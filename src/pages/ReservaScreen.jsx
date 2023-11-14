@@ -2,50 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/reserva.css";
 import { crearReserva } from "../helpers/ReservaApi";
-<<<<<<< HEAD
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-// import TextField from '@mui/material/TextField';
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-// import Button from 'react-bootstrap/Button';
-import MessageApp from "../components/MessageApp";
-// import { styled } from '@mui/material/styles';
-// import { FormText } from "react-bootstrap";
-
-
-
-
-
-// const CssTextField = styled(TextField,Select)({
-//   '& label.Mui-focused': {
-//     color: '#ffff',
-//   },
-//   '& .MuiInput-underline:after': {
-//     borderBottomColor: '#ffff',
-//   },
-//   '& .MuiOutlinedInput-root': {
-//     '& fieldset': {
-//       borderColor: '#ffff',
-      
-//     },
-//     '&:hover fieldset': {
-//       borderColor: '#ffff',
-//     },
-//     '&.Mui-focused fieldset': {
-//       borderColor: '#ffff',
-      
-//     },
-//   },
-// });
-=======
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -61,7 +17,7 @@ import Select from "@mui/material/Select";
 import Button from "react-bootstrap/Button";
 import MessageApp from "../components/MessageApp";
 import { styled } from "@mui/material/styles";
-import { FormText } from "react-bootstrap";
+import { FormSelect, FormText } from "react-bootstrap";
 import  InputCategoria  from "../components/InputCategoria";
 
 const CssTextField = styled(
@@ -86,17 +42,13 @@ const CssTextField = styled(
     },
   },
 });
->>>>>>> reservas
 
 const ReservasScreen = (Reservacion, guardarReserva) => {
   const navigate = useNavigate();
   const [inputNombre, setInputNombre] = useState("");
   const [inputUsuario, setInputUsuario] = useState("");
-<<<<<<< HEAD
-=======
   const [entrada, setEntrada] = useState('');
   const [salida, setSalida] = useState('');
->>>>>>> reservas
 
   
 
@@ -218,9 +170,9 @@ const ReservasScreen = (Reservacion, guardarReserva) => {
                 <div className="catego catego1">
                   <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>Habitaciones</Form.Label>
-                    <Form.Select className="hab" defaultValue="Choose...">
+                    <FormSelect className="hab" defaultValue="Choose...">
                     <InputCategoria categoriaSeleccionada={categoriaSeleccionada}/>
-                    </Form.Select>
+                    </FormSelect>
                   </Form.Group>
                 </div>
               </div>

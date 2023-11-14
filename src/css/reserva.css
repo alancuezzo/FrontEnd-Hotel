@@ -21,7 +21,6 @@
   }
 
 
-
   .container-fluid {
     margin: 0;
     display: flex;
@@ -132,6 +131,11 @@
 
 
 
+.goldenimg1{
+width: 70%;
+position: relative;
+left: 50px;
+}
 
 h4 {
 margin-top: 5px;
@@ -177,83 +181,13 @@ margin-bottom: 0%;
 
 .catego1{
   display: flex;
-  place-items: center;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-  min-width: 320px;
-  min-height: 100vh;
-  background-image: url(https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/madinat-jumeirah/al-qasr-at-madinat-jumeirah/hero/jumeirah-al-qasr-entrance-aerial-drone_landscape.jpg?w=2080);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.borde{
-  padding: 10px;
-  padding-left: 25px;
-  height: 680px;
-  width: 400px;
-  background-color: rgba(0, 0, 0, 0.112);
-  backdrop-filter: blur(10px);
-  color: #ffff;
-  border: 1px solid #ffffff33;
-  border-radius: 10px;
-  padding: 30px 40px;
-  
-}
-
-.texto {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  position: relative;
-  left: -15px;
-  
-  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-}
-.formcompleto{
- display: flex;
- 
-}
-.calendar{
-  display: flex;
-  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-  
-}
-
-.formu{
- display: flex;
- justify-content: center;
- width: 90%;
- margin-bottom: 10px;
-  
- 
-}
-.formul{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-
- }
-
-
- .formu1::placeholder{
-  color: white;
-  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
- }
-
- 
-.formu .formu1 {
-=======
   width: 33%;
   margin-top: 10%;
->>>>>>> reservas
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
   font-size: 16px;
-  width: 100%;
-  height: 100%;
+  /* height: 100%; */
   color: #ffff;
   background: transparent;
   border: none;
@@ -264,21 +198,7 @@ margin-bottom: 0%;
   
 }
 
-<<<<<<< HEAD
-.boton{
-display: flex;
-justify-content: center;
-width: 100%;
-font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
 
-}
-
-button:hover{
-background-color: #675C46;
-}
-=======
-
->>>>>>> reservas
 
 .boton{
   display: flex;
