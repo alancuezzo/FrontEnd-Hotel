@@ -1,10 +1,16 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/GOLDEN_LOGO.png";
 import "../css/navbar.css";
 import ToggleMenu from "./ToggleMenu"
 
 const NavBar = () => {
+
+    const Navigate = useNavigate();
+
+    Navigate("/");
+
     return (
         <>
             <div className="navbar1">
@@ -46,7 +52,7 @@ const NavBar = () => {
                         </li>
                     </ul>
                     <button className="boton_reservas">
-                        <Link>RESERVAR AHORA</Link>
+                        <NavLink to="/reservas">RESERVAR AHORA</NavLink>
                     </button>
                 </div>
             </div>
