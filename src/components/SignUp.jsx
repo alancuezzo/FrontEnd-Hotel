@@ -8,7 +8,7 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
-  const [resultado, setResultado] = useState("");
+  const [resultado, setResultado] = useState(null);
   const [loading, setLoading] = useState(false);
 
 
@@ -127,12 +127,9 @@ const SignUp = () => {
             <div className="register-link">
               <p>Ya tienes una cuenta? <NavLink to="/login">Login</NavLink> </p>
             </div>
-            {resultado?.msg && (
+            {resultado ? (
               <MessageApp mensaje={resultado.msg} />
-            )}
-            {resultado?.error && (
-              <MessageApp mensaje={resultado.error} />
-            )}
+            ) : ""}
           </form>
 
         </div>

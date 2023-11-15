@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 //funcion de reservas by id y actualizars
 import { getReservaById, actualizarReserva } from "../helpers/ReservaApi";
 //fucnion de categorias
-import { getCategorias } from "../helpers/categoriaApi";
+import { getCategorias } from "../helpers/CategoriaApi";
 
 //sweet alert
 import Swal from "sweetalert2";
