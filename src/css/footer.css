@@ -22,6 +22,7 @@
 
 .pie-pagina .grupo-1{
     max-width: 1200px;
+    height: 200px ;
     margin: auto;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -31,13 +32,22 @@
     letter-spacing: 1px;
 }
 
+.pie-pagina .grupo-1 .box{
+    width: 100%; 
+}
+
 .pie-pagina .grupo-1 .box img{
-    width: 300px;
-    margin-top: 25px;
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box ul{
+    width: 100%;
+    height: 30px;  
 }
 
 .pie-pagina .grupo-1 .box ul li{
-    margin-bottom: 12px;
+
+    margin-bottom: 2px;
     list-style: none;  
 }
 
@@ -63,8 +73,8 @@
 .pie-pagina .grupo-1 .red-social a{
     display: inline-block;
     text-decoration: none;
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     line-height: 50px;
     color: #fff;
     margin: 100px 20px 0 15px;

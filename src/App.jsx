@@ -31,7 +31,6 @@ function App() {
       {/* <Route path="*" element={<ErrorScreen />} /> */}
       <BrowserRouter>
         <Routes>
-
           <Route
             path="/*"
             element={

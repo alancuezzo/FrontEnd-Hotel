@@ -1,5 +1,11 @@
-
+*{
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 0;
+}
 :root {
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+ 
     line-height: 1.5;
     font-weight: 400;
   
@@ -21,12 +27,13 @@
     place-items: center;
     justify-content: center;
     align-items: center;
-    min-width: 320px;
+    min-width: 260px;
     min-height: 100vh;
     background-image: url(https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/madinat-jumeirah/al-qasr-at-madinat-jumeirah/hero/jumeirah-al-qasr-entrance-aerial-drone_landscape.jpg?w=2080);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
   }
 
   .borde{
@@ -53,21 +60,40 @@
     font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
   }
   .formcompleto{
-   display: flex;
+   width: auto;
    
+  }
+
+  .calendario{
+    display: flex;
+   width: 100%;
+  width: 100%;
+  gap: 5px;  
+ 
   }
   .calendar{
     display: flex;
     font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  
+  }
+  .calendar1{
+    margin-right: 0px;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
     
   }
+
+
   
   .formu{
    display: flex;
    justify-content: center;
    width: 90%;
    margin-bottom: 10px;
-    
+   margin-left: 15px;
    
   }
   .formul{
@@ -75,7 +101,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-  
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
    }
 
 
@@ -107,77 +133,101 @@
   .formu .formu2{
     margin-bottom: 10px; }
 
- 
+
 
 .goldenimg1{
 width: 70%;
 position: relative;
-left: auto;
+left: 1px;
 }
 
 h4 {
-margin-top: 10px;
+margin-top: 5px;
 margin-bottom: 0%;
-font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
-
 }
 
 
-
-.cal{
-  margin: 5%;
-  padding: 0%;
-  font-size: small;
-}
 
 .box {
   display: flex;
   justify-content: center;
   width: 100%;
+  
 }
 
-.personas{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 5%;
-  color: aliceblue;
-}
+
 
 .catego{
   width: 100%;
   display: flex;
   justify-content: center;
-  
+ 
 }
 
 
+
+.hab{
+  background-color: transparent;
+  border: none;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.hab option{
+  background-color: transparent;
+  width: 100%;
+  
+}
+.catego1 .catego2{
+  border: none;
+  width: 100%;
+  
+}
+.ensal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  color: #ffff;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0px;
+}
 .catego1{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  margin-top: 5%;
+  width: 80%;
+  margin-top: 10%;
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
   font-size: 16px;
-  height: 100%;
+  /* height: 100%; */
   color: #ffff;
   background: transparent;
   border: none;
   outline: none;
   border: 2px solid rgba(255, 255, 255, .2);
-  border-radius: 40px;
+  /* border-radius: 40px; */
   padding: 10px 15px 10px 10px;
   
 }
+
+
 
 .boton{
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 10%;
   font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
   
 }
+
+
 
 button:hover{
   background-color: #675C46;
@@ -194,10 +244,11 @@ button:hover{
   margin: 5px;
   padding-top: 3%;
   color: #FFFFFF;
+  font-family: jumeirah-font2,Helvetica,Arial,sans-serif;
+  
 }
 
 .button:focus,
 .button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
