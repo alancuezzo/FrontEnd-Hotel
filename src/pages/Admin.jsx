@@ -1,9 +1,12 @@
 import React from "react";
-import "./css/admin.css";
+import "../css/admin.css";
+// import { traerUsuarios } from "../helpers/AdminApi";
 
-function Admin() {
+const Admin = () => {
+    let contenido = document.getElementById('contenido');
+
     const cambiarContenido = (pagina) => {
-        var contenido = document.getElementById('contenido');
+
 
         switch (pagina) {
             case 'habitaciones':

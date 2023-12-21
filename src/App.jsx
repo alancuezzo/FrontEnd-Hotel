@@ -6,6 +6,9 @@ import ProtectedRoutes from "./routes/ProtectedRoutes"
 import RoutesDos from "./routes/RoutesDos"
 import SignUp from "./components/SignUp"
 import Login from './components/Login';
+import Admin from "./pages/Admin";
+
+
 
 
 function App() {
@@ -35,13 +38,13 @@ function App() {
           <Route
             path="/*"
             element={
-              <ProtectedRoutes login={login}>
-                <RoutesDos cerrarSesion={cerrarSesion} user={user} />
+              <ProtectedRoutes login={login} >
+                <RoutesDos cerrarSesion={cerrarSesion} user={user} login={login} />
               </ProtectedRoutes>
             }
 
           />
-          <Route path='/reservas' element={<ReservaScreen />} />
+          <Route path='/reservas' element={ReservaScreen} />
           <Route
             path="/login"
             element={
@@ -55,6 +58,12 @@ function App() {
               <SignUp />
             }
           />
+          {/* <Route path="/habitaciones"
+            element={<DetalleHabitacionPage />}
+          /> */}
+
+
+
         </Routes>
       </BrowserRouter>
     </>
